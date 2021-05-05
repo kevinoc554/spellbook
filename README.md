@@ -1,6 +1,6 @@
 # SpellBook
 ## Project Goals
-SpellBook is intended a resource for players of the tabletop role playing game, Dungeons & Dragons (5th edition), published by Wizards of the Coast.
+SpellBook is intended a resource for players of the tabletop role playing game, Dungeons & Dragons (D&D), published by Wizards of the Coast (Wizards).
 
 SpellBook offers a quick, simple and interactive way for players to look up the  Spells associated with the different D&D classes, and to examine the game rules for each Spell in detail.
 
@@ -17,7 +17,8 @@ Site Owner Goal:
 2. As a user, I want to be able to search through the list to locate a particular Spell.
 3. As a user, I want to be able to view the game information and description for a particular Spell.
 4. As a user, I want to be able to contact the Site Owner to provide feedback or request further features
-5. As the site owner, I want to be able to provide clear attribution
+5. As the site owner, I want to be able to provide clear documentation on the licence under which the game information is provided, and attribution wherever copyrighted material is used.
+
 ### Wireframes
 - [index.html](assets/wireframes/index.pdf)
 - [contact.html](assets/wireframes/contact.pdf)
@@ -27,6 +28,15 @@ Site Owner Goal:
 ### Features to be implemented
 
 ## Technologies Used
+- HTML5 - the pages of this site were designed using HTML.
+- CSS3 - the pages of this site were styled using CSS.
+- JavaScript - the interactive elements of this site were implemented using JavaScript.
+- [Gitpod](https://www.gitpod.io/) - the site was developed using Gitpod as the development environment.
+- [Bootstrap](https://getbootstrap.com/) - Bootstrap was used to structure the layout of the site and assist in making it responsive.
+- [Font Awesome](https://fontawesome.com/) - Font Awesome icons were used for the social media links in the footer.
+- [Google Fonts](https://fonts.google.com/) - Google Fonts were used throughout the project.
+- [D&D 5e API](http://www.dnd5eapi.co/) - All game information was requested via this API.
+- [EmailJS](https://www.emailjs.com/) - The EmailJS API was used in order to send submitted data from contact.html to the site owner.
 
 ## Testing
 ### Validation
