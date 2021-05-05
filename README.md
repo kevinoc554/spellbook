@@ -33,6 +33,7 @@ Site Owner Goal:
 - JavaScript - the interactive elements of this site were implemented using JavaScript.
 - [Gitpod](https://www.gitpod.io/) - the site was developed using Gitpod as the development environment.
 - [Bootstrap](https://getbootstrap.com/) - Bootstrap was used to structure the layout of the site and assist in making it responsive.
+- [jQuery](https://jquery.com/) - jQuery was used to simplify and condense JavaScript, particularly for interacting with, and writing to, the DOM.  
 - [Font Awesome](https://fontawesome.com/) - Font Awesome icons were used for the social media links in the footer.
 - [Google Fonts](https://fonts.google.com/) - Google Fonts were used throughout the project.
 - [D&D 5e API](http://www.dnd5eapi.co/) - All game information was requested via this API.
