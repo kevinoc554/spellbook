@@ -50,8 +50,27 @@ Site Owner Goal:
 ### Bugs to be fixed
 
 ## Deployment
+- This site was developed in [Gitpod](https://www.gitpod.io/), committed and pushed to [Github](https://github.com/), and deployed on [GitHub Pages](https://pages.github.com/).
+- At the time of submission, there are no differences between the development version and deployed version of the site.
+
 ### The following steps were taken to deploy this site:
+- Logged in to Github, and navigated to the site's **[repository](https://github.com/kevinoc554/spellbook)**.
+- Clicked on **Settings** in the toolbar near the top of the screen.
+- Clicked on **Pages** on the left side of the **Settings** page.
+- Under the **Source** heading, clicked on the **Branch** dropdown, and selected **Master**.
+- Clicked on **Save**, deploying the site.
+- Clicked on the URL at the top of the **GitHub Pages** section to navigate to the live site.
+- *More info on deploying to **GitHub Pages** can be found [here](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site).*
+
 ### To run and edit the code for this site locally, follow these steps:
+* Log in to GitHub, and navigate to the site's **[repository](https://github.com/kevinoc554/spellbook)**.
+* Click on the green **Code** button.
+* Copy the URL under **Clone with HTTPS** by clicking on the **Copy** button.
+* Open the terminal in your IDE, and navigate to the desired directory.
+* Type `git clone` into the terminal, and paste in the copied URL, e.g.,  
+``git clone https://github.com/kevinoc554/spellbook.git``
+* Press enter to clone the repository.
+* *More info on cloning a **GitHub** repository can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).*
 
 ## Credits
 ### Code
