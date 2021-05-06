@@ -30,6 +30,7 @@ hr {
 
 /* ---Class Icons--- */
 .class-icons-row .list-inline {
+    margin-top: .5rem;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -43,6 +44,10 @@ hr {
     padding-right: .5rem;
     margin: 0;
     margin-bottom: .5rem;
+}
+
+.class-icons-row .list-inline .list-inline-item a {
+    color: #343a40;
 }
 
 /* ---Media Queries--- */
