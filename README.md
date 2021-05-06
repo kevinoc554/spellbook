@@ -74,6 +74,7 @@ Site Owner Goal:
 
 ## Credits
 ### Code
+- The site's responsive offcanvas navbar was adapted from a Bootstrap example [here](https://getbootstrap.com/docs/4.6/examples/offcanvas/).
 ### Content
 ### Media
 ### Acknowledgements
