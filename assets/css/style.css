@@ -15,6 +15,7 @@ body {
 .jumbotron {
     color: #fafafa;
     background: url(../images/phb-art.jpg) no-repeat fixed center;
+    border-radius: 0;
 }
 
 hr {
