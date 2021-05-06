@@ -24,7 +24,7 @@ hr {
 }
 
 /* ---Instructions--- */
-#instructionsRow {
+.instructions-row {
     background-color: #f7f7f7;
 }
 
