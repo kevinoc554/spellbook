@@ -1,4 +1,4 @@
-/* General */
+/* ---General--- */
 
 html,
 body {
@@ -11,7 +11,17 @@ body {
     padding-top: 3.5rem;
 }
 
-/* Media Queries */
+/* ---Jumbotron--- */
+.jumbotron {
+    color: #fafafa;
+    background: url(../images/phb-art.jpg) no-repeat fixed center;
+}
+
+hr {
+    border-color: #fafafa;
+}
+
+/* ---Media Queries--- */
 
 /* CSS for offcanvas navbar - adapted from Bootstrap */
 @media (max-width: 991.98px) {
