@@ -16,10 +16,16 @@ body {
     color: #fafafa;
     background: url(../images/phb-art.jpg) no-repeat fixed center;
     border-radius: 0;
+    margin-bottom: 0;
 }
 
 hr {
     border-color: #fafafa;
+}
+
+/* ---Instructions--- */
+#instructionsRow {
+    background-color: #f7f7f7;
 }
 
 /* ---Media Queries--- */
