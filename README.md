@@ -38,6 +38,7 @@ Site Owner Goal:
 - [Google Fonts](https://fonts.google.com/) - Google Fonts were used throughout the project.
 - [D&D 5e API](http://www.dnd5eapi.co/) - All game information was requested via this API.
 - [EmailJS](https://www.emailjs.com/) - The EmailJS API was used in order to send submitted data from contact.html to the site owner.
+- [Free Logo Design](https://www.freelogodesign.org/) - The site's brand logo was created using Free Logo Design.
 
 ## Testing
 ### Validation
