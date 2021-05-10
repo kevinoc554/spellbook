@@ -45,6 +45,7 @@ hr {
 }
 
 .class-icons-row .list-inline .list-inline-item {
+    text-align: center;
     border: 2px solid #343a40;
     border-radius: 10px;
     padding-left: .5rem;
