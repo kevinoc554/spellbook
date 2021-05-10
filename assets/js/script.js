@@ -1,3 +1,12 @@
+// Trigger DataTables onload and sort by Level
+$(document).ready( function () {
+    $('#spell-list-table').DataTable({
+        "order": [ 1, 'asc' ],
+        "info": false,
+        "paging": false
+    });
+} );
+
 // Offcanvas effect on navbar adapted from Bootstrap
 $('.navbar-toggler').click(function () {
     $('#navbarNav').toggleClass('open');

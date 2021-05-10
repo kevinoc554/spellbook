@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- DataTables CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.24/sc-2.0.3/datatables.min.css"/>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>SpellBook</title>
 </head>
@@ -136,10 +138,10 @@
                 </div>
             </div>
             <div class="row">
-                <div id="spell-list" class="col-6">
+                <div id="spell-list" class="col-12 col-sm-6">
                     <h2 class="text-center">Spell List</h2>
-                    <table class="table">
-                        <thead>
+                    <table class="table table-hover" id="spell-list-table">
+                        <thead class="thead-light">
                             <tr>
                                 <th scope="col">Spell Name</th>
                                 <th scope="col">Level</th>
@@ -160,7 +162,7 @@
                             <tr>
                                 <th scope="row">Place</th>
                                 <td>2</td>
-                                <td>Hard Knocks</td>
+                                <td>Restoration</td>
                             </tr>
                             <tr>
                                 <th scope="row">Holder</th>
@@ -170,7 +172,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div id="spell-data" class="col-6">
+                <div id="spell-data" class="col-12 col-sm-6">
                     <h2 class="text-center">Spell Info</h2>
                 </div>
             </div>
@@ -180,6 +182,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.24/sc-2.0.3/datatables.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
