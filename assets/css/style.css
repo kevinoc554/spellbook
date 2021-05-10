@@ -70,8 +70,7 @@ hr {
 @media (max-width: 991.98px) {
     .offcanvas-collapse {
         position: fixed;
-        /* Height of navbar */
-        top: 3.5rem;
+        top: 4.5rem;
         bottom: 0;
         left: 100%;
         width: 100%;
