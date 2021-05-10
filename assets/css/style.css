@@ -58,6 +58,13 @@ hr {
     color: #343a40;
 }
 
+/* ---Spell List--- */
+#spell-list {
+    border-right: 1px solid #343a40;
+}
+
+/* ---Spell Information--- */
+
 /* ---Media Queries--- */
 
 /* Styling for Class Icons on larger screens */
