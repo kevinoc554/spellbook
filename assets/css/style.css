@@ -60,19 +60,26 @@ hr {
 
 /* ---Spell List--- */
 #spell-list {
-    border-right: 1px solid #343a40;
+    border-bottom: 1px solid #343a40;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
 }
 
 /* ---Spell Information--- */
 
 /* ---Media Queries--- */
 
-/* Styling for Class Icons on larger screens */
+/* Styling for larger screens */
 @media (min-width: 576px) {
     .class-icons-row .list-inline .list-inline-item {
         border: none;
         margin: 0;
         padding-top: 1rem;
+    }
+    #spell-list {
+        border: none;
+        border-right: 1px solid #343a40;
     }
 }
 
