@@ -28,12 +28,16 @@ hr {
 
 /* ---Instructions--- */
 .instructions-row {
-    background-color: #f7f7f7;
+    background-color: #a6a6a6;
 }
 
 /* ---Class Icons--- */
+.class-icons-row {
+    background-color: #f7f7f7;
+}
+
 .class-icons-row .list-inline {
-    margin-top: .5rem;
+    margin-top: 1rem;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
