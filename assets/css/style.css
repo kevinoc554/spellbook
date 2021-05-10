@@ -14,7 +14,10 @@ body {
 /* ---Jumbotron--- */
 .jumbotron {
     color: #fafafa;
-    background: url(../images/phb-art.jpg) no-repeat fixed center;
+    background-image: url(../images/phb-art.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 0;
     margin-bottom: 0;
 }
@@ -51,6 +54,13 @@ hr {
 }
 
 /* ---Media Queries--- */
+
+/* Adjust BG Image positioning on larger screens */
+@media (min-width: 1440px) {
+    .jumbotron {
+        background-position: 50% 40%;
+    }
+}
 
 /* CSS for offcanvas navbar - adapted from Bootstrap */
 @media (max-width: 991.98px) {
