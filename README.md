@@ -39,6 +39,8 @@ Site Owner Goal:
 - [D&D 5e API](http://www.dnd5eapi.co/) - All game information was requested via this API.
 - [EmailJS](https://www.emailjs.com/) - The EmailJS API was used in order to send submitted data from contact.html to the site owner.
 - [Free Logo Design](https://www.freelogodesign.org/) - The site's brand logo was created using Free Logo Design.
+- [Favicon Generator](https://www.favicongenerator.com/) - Favicon Generator was used to create and size the favicon for the site, using the logo created above.
+- [Squoosh](https://squoosh.app/) - All images used on the site were compressed and resized using Squoosh.
 
 ## Testing
 ### Validation
