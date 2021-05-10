@@ -60,6 +60,15 @@ hr {
 
 /* ---Media Queries--- */
 
+/* Styling for Class Icons on larger screens */
+@media (min-width: 576px) {
+    .class-icons-row .list-inline .list-inline-item {
+        border: none;
+        margin: 0;
+        padding-top: 1rem;
+    }
+}
+
 /* Adjust BG Image positioning on larger screens */
 @media (min-width: 1440px) {
     .jumbotron {
