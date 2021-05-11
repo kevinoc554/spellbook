@@ -1,5 +1,7 @@
-/* ---General--- */
+/* ---Import Google Fonts--- */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Lora&family=Roboto&display=swap');
 
+/* ---General--- */
 html,
 body {
     /* Prevent scroll on narrow devices */
@@ -7,8 +9,16 @@ body {
 }
 
 body {
-    /* Height of Navbar */
     padding-top: 4.5rem;
+    font-family: 'Lora', serif;
+}
+
+.brand-name, h1 {
+    font-family: 'Aclonica', sans-serif;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
 }
 
 /* ---Navbar--- */
@@ -24,6 +34,10 @@ body {
     background-repeat: no-repeat;
     border-radius: 0;
     margin-bottom: 0;
+}
+
+.jumbo-header {
+    font-size: 2.5rem;
 }
 
 hr {
@@ -78,6 +92,9 @@ hr {
 @media (min-width: 576px) {
     .navbar {
         padding-left: 1rem;
+    }
+    .jumbo-header {
+        font-size: 3.5rem;
     }
     .class-icons-row .list-inline .list-inline-item {
         border: none;
