@@ -79,6 +79,14 @@ h2 {
     color: #343a40;
 }
 
+/* ---Spell Row--- */
+.spell-row {
+    background-image: url(../images/paper-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* ---Spell List--- */
 #spell-list {
     border-bottom: 1px solid #343a40;
