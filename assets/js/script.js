@@ -19,3 +19,17 @@ $('#instructionsToggle').click(function () {
     $(this).toggleClass('fa-chevron-up');
     $('#instructionsText').slideToggle();
 });
+
+// Manual toggle to show/hide Materials text
+$('#materialsListToggle').click(function () {
+    $(this).toggleClass('fa-chevron-down');
+    $(this).toggleClass('fa-chevron-up');
+    $('#materialsText').slideToggle('fast');
+});
+
+// Manual toggle to show/hide Damages at higher levels text
+$('#damageListToggle').click(function () {
+    $(this).toggleClass('fa-chevron-down');
+    $(this).toggleClass('fa-chevron-up');
+    $('#damagesText').slideToggle();
+});
