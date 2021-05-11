@@ -79,9 +79,13 @@ hr {
 /* ---Spell List--- */
 #spell-list {
     border-bottom: 1px solid #343a40;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
     padding-bottom: .5rem;
+}
+
+/* ---Spell Data--- */
+#spell-data {
+    padding-top: 1rem;
 }
 
 /* ---Spell Information--- */
