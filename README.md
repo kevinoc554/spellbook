@@ -50,7 +50,10 @@ Site Owner Goal:
 ### Manual Testing
 
 ## Bugs
-### Fixes
+### Fixed
+- **Bug:** The search input added by the DataTables plugin was displaying incorrectly on tablet-sized screens.
+    - **Issue:** DataTables creates a Bootstrap `.row` containing two `.col` divs to position the label and search input. The first of these divs was too wide, pushing the search input accross the middle of the screen.
+    - **Fix:** Created a media query for tablet-sized screens only, intended to target the div in question and reduce it's `max-width`.
 ### Bugs to be fixed
 
 ## Deployment
