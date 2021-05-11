@@ -8,9 +8,13 @@ body {
 
 body {
     /* Height of Navbar */
-    padding-top: 3.5rem;
+    padding-top: 4.5rem;
 }
 
+/* ---Navbar--- */
+.navbar {
+    padding-left: 0;
+}
 /* ---Jumbotron--- */
 .jumbotron {
     color: #fafafa;
@@ -70,8 +74,11 @@ hr {
 
 /* ---Media Queries--- */
 
-/* Styling for larger screens */
+/* Styling for larger screens (tablets and up) */
 @media (min-width: 576px) {
+    .navbar {
+        padding-left: 1rem;
+    }
     .class-icons-row .list-inline .list-inline-item {
         border: none;
         margin: 0;
