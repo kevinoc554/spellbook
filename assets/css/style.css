@@ -111,6 +111,13 @@ hr {
     }
 }
 
+/* Fix positioning for DataTables search bar on tablet only */
+@media (min-width: 767px) and (max-width: 1023px) {
+    #spell-list-table_wrapper>.row:first-child {
+        max-width: 30%;
+    }
+}
+
 /* Adjust BG Image positioning on larger screens */
 @media (min-width: 1440px) {
     .jumbotron {
