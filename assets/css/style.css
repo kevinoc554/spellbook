@@ -131,6 +131,18 @@ h2 {
     background-image: linear-gradient(to right, rgba(250, 250, 250, 0), rgba(250, 250, 250, .75), rgba(250, 250, 250, 0))
 }
 
+.footer-about-list li a {
+    color: #fafafa;
+}
+
+.footer-about-list li:first-child {
+    font-family: 'Aclonica', sans-serif;
+}
+
+.footer-about-list li:not(:first-child) {
+    font-family: 'Lora', serif;
+}
+
 .disclaimer-text {
     font-size: .5rem;
 }
