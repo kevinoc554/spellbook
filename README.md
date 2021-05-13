@@ -20,9 +20,9 @@ Site Owner Goal:
 5. As the site owner, I want to be able to provide clear documentation on the licence under which the game information is provided, and attribution wherever copyrighted material is used.
 
 ### Wireframes
-- [index.html](assets/wireframes/index.pdf)
-- [contact.html](assets/wireframes/contact.pdf)
-- [about.html](assets/wireframes/about.pdf)
+- [index.html](wireframes/index.pdf)
+- [contact.html](wireframes/contact.pdf)
+- [about.html](wireframes/about.pdf)
 
 ## Features
 ### Features to be implemented
