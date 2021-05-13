@@ -24,7 +24,7 @@ h2 {
 }
 
 .bg-dark {
-    background-color: #291c1b!important;
+    background-color: #291c1b !important;
 }
 
 /* ---Navbar--- */
@@ -134,7 +134,7 @@ h2 {
 .social-links {
     padding-top: .2rem;
     padding-right: .5rem;
-    text-align: right;   
+    text-align: right;
 }
 
 .social-links-list li a {
@@ -148,6 +148,11 @@ h2 {
     background-color: #b4a0ab;
     text-align: center;
     padding: .5rem 0;
+}
+
+.hvr-fade:active, .hvr-fade:focus, .hvr-fade:hover {
+    background-color: #c75d25;
+    color: #fafafa;
 }
 
 .footer-about-list li a {
