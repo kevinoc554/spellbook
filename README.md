@@ -37,6 +37,8 @@ Site Owner Goal:
 - [DataTables](https://www.datatables.net/) - DataTables was used to add ordering and filtering functionality to the site's tables.
 - [Font Awesome](https://fontawesome.com/) - Font Awesome icons were used for the social media links in the footer.
 - [Google Fonts](https://fonts.google.com/) - Google Fonts were used throughout the project.
+- [Hover.CSS](https://ianlunn.github.io/Hover/) - Hover.CSS was used to add hover effects to social media links in the footer.
+- [Image Color Picker](https://imagecolorpicker.com/) - Image Color Picker was used to select the site's color pallette.
 - [D&D 5e API](http://www.dnd5eapi.co/) - All game information was requested via this API.
 - [EmailJS](https://www.emailjs.com/) - The EmailJS API was used in order to send submitted data from contact.html to the site owner.
 - [Free Logo Design](https://www.freelogodesign.org/) - The site's brand logo was created using Free Logo Design.
