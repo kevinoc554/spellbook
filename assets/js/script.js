@@ -42,8 +42,8 @@ $(document).ready(function () {
         }
     })
 
-    // Smooth scroll to top when btn is clicked 
+    // Smooth scroll to top when btn is clicked WIP
     $('#toTopBtn').click(function () {
-        console.log($(this));
+        $(window).scrollTop(0);
     });
 });
