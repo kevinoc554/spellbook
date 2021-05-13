@@ -176,6 +176,22 @@ h3 {
     font-size: .5rem;
 }
 
+/* ---About Page--- */
+#toTopBtn {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+#toTopBtn i {
+    height: 3rem;
+    width: 3rem;
+    padding-top: .5rem;
+    font-size: 2rem;
+    background-color: #c75d25;
+    display: none;
+}
+
 /* ---Media Queries--- */
 
 /* Styling for medium to large screens (tablets and up) */
