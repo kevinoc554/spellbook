@@ -181,6 +181,8 @@ h3 {
     position: fixed;
     bottom: 1rem;
     right: 2rem;
+    z-index: 100;
+    display: none;
 }
 
 #toTopBtn i {
@@ -188,8 +190,8 @@ h3 {
     width: 3rem;
     padding-top: .5rem;
     font-size: 2rem;
-    background-color: #c75d25;
-    display: none;
+    background-color: rgba(199,93,37, 0.8);
+    
 }
 
 /* ---Media Queries--- */
