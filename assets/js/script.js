@@ -35,15 +35,17 @@ $(document).ready(function () {
 
     // Fade Return to Top button in and out
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
+        if ($(this).scrollTop() > 150) {
             $('#toTopBtn').fadeIn();
         } else {
             $('#toTopBtn').fadeOut();
         }
     })
 
-    // Smooth scroll to top when btn is clicked WIP
+    // Smooth scroll to top when btn is clicked
     $('#toTopBtn').click(function () {
-        $(window).scrollTop(0);
+        $('html').animate({
+            scrollTop: 0
+        }, 1000);
     });
 });
