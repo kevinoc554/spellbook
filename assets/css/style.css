@@ -180,8 +180,8 @@ h3 {
 /* ---About Page--- */
 #toTopBtn {
     position: fixed;
-    bottom: 1rem;
-    right: 2rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
     z-index: 100;
     display: none;
 }
@@ -189,6 +189,7 @@ h3 {
 #toTopBtn i {
     height: 3rem;
     width: 3rem;
+    border-radius: 50%;
     padding-top: .5rem;
     font-size: 2rem;
     background-color: rgba(199,93,37, 0.8);
