@@ -56,6 +56,10 @@ Site Owner Goal:
 - **Bug:** The search input added by the DataTables plugin was displaying incorrectly on tablet-sized screens.
     - **Issue:** DataTables creates a Bootstrap `.row` containing two `.col` divs to position the label and search input. The first of these divs was too wide, pushing the search input accross the middle of the screen.
     - **Fix:** Created a media query for tablet-sized screens only, intended to target the div in question and reduce it's `max-width`.
+- **Bug:** The return to top button was causing the viewport to jump to the top, rather than a smooth scroll.
+    - **Issue:** Was using JQuery to target the `window` and set the `.scrollTop()` to `0` on click, causing the page to jump to the top.
+    - **Fix:** Targeted the `html` element instead of the `window`, and used the `.animate()` method to set the `scrollTop` to `0` smoothly over the course of `1000ms`.
+
 ### Bugs to be fixed
 
 ## Deployment
