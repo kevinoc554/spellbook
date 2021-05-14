@@ -15,11 +15,12 @@ body {
 
 .brand-name,
 .spell-name,
+h2,
 h1 {
     font-family: 'Aclonica', sans-serif;
 }
 
-h2,
+
 h3 {
     font-family: 'Roboto', sans-serif;
 }
@@ -59,7 +60,7 @@ h3 {
 /* ---Instructions--- */
 .instructions-row {
     padding-top: .5rem;
-    background-color: #cbc2b1;
+    background-color: #cbc2b180;
     color: #291c1b;
 }
 
@@ -191,7 +192,14 @@ h3 {
     padding-top: .5rem;
     font-size: 2rem;
     background-color: rgba(199,93,37, 0.8);
-    
+}
+
+.about-contents {
+    background-color: #b4a0ab80;
+}
+
+.about-info {
+    background-color: #cbc2b180;
 }
 
 /* ---Media Queries--- */
