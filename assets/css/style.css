@@ -201,6 +201,7 @@ h3 {
 
 .about-toc {
     font-size: 1rem;
+    z-index: 1;
 }
 
 .about-toc ol li a {
@@ -208,15 +209,23 @@ h3 {
 }
 .about-heading {
     text-align: center;
-    padding-top: .75rem;
+    margin-top: .75rem;
+
+    /* Positive padding-top and negative margin-top
+    'Pushes' the headings down so they display when targeted by # links, instead of being obscured by fixed navbar */
+    padding-top: 6.5rem;
+    margin-top: -6.5rem;
 }
 
 .about-contents {
     background-color: #b4a0ab80;
+    z-index: 1;
 }
 
 .about-info {
     background-color: #cbc2b180;
+    z-index: -1;
+    padding-top: .5rem;
 }
 
 /* ---Media Queries--- */
