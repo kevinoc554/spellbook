@@ -195,6 +195,14 @@ h3 {
     background-color: rgba(199,93,37, 0.8);
 }
 
+.about-main-heading {
+    margin-top: .75rem;
+}
+
+.about-toc {
+    font-size: 1rem;
+}
+
 .about-contents {
     background-color: #b4a0ab80;
 }
@@ -225,11 +233,19 @@ h3 {
         border: none;
         border-right: 1px solid #343a40;
     }
+
+    .about-toc ol {
+        padding-left: 1rem;
+    }
 }
 /* Styling for large screens (laptops and up) */
 @media (min-width: 991.98px) {
     .nav-item:not(:last-child) {
         border-right: 1px solid #ffffff80;
+     }
+
+     .about-toc {
+         font-size: 1.25rem;
      }
 }
 
