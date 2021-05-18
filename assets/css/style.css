@@ -203,6 +203,14 @@ h3 {
     font-size: 1rem;
 }
 
+.about-toc ol li a {
+    color: #291c1b;
+}
+.about-heading {
+    text-align: center;
+    padding-top: .75rem;
+}
+
 .about-contents {
     background-color: #b4a0ab80;
 }
@@ -234,8 +242,16 @@ h3 {
         border-right: 1px solid #343a40;
     }
 
+    .about-toc {
+        margin-top: .75rem;
+    }
+
     .about-toc ol {
         padding-left: 1rem;
+    }
+
+    .about-heading {
+        text-align: left;
     }
 }
 /* Styling for large screens (laptops and up) */
@@ -246,6 +262,7 @@ h3 {
 
      .about-toc {
          font-size: 1.25rem;
+         margin-top: 1rem;
      }
 }
 
