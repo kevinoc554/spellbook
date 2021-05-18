@@ -59,7 +59,9 @@ Site Owner Goal:
 - **Bug:** The return to top button was causing the viewport to jump to the top, rather than a smooth scroll.
     - **Issue:** Was using JQuery to target the `window` and set the `.scrollTop()` to `0` on click, causing the page to jump to the top.
     - **Fix:** Targeted the `html` element instead of the `window`, and used the `.animate()` method to set the `scrollTop` to `0` smoothly over the course of `1000ms`.
-
+- **Bug:** When using links to target specific elements by their ID, the element was being overlaid by the site's fixed navbar.
+    - **Issue:** The links were causing the top of the target element to sit at the very top of the window, which meant the fixed navbar was obscuring them.
+    - **Fix:** Applied a positive `padding-top` and a corresponding negative `margin-top` to the target elements. This fixed the bug, but caused issues on mobile screens as the new padding on the first element was blocking clicks on links. This was fixed by changing the `z-index` of the divs.
 ### Bugs to be fixed
 
 ## Deployment
