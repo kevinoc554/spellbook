@@ -50,5 +50,5 @@ $(document).ready(function () {
     });
 
     // EmailJS Test
-    emailjs.send("service_0mkicmg","template_1vpz1s8");
+    // emailjs.send("service_0mkicmg","template_1vpz1s8");
 });
