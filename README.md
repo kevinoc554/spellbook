@@ -93,4 +93,5 @@ Site Owner Goal:
 ### Content
 ### Media
 - Hero images and Class Icons on the site are taken from the official Dungeons & Dragons Fan Site Kit, and used in line with Wizard's [Fan Site Kit Policy](https://dnd.wizards.com/articles/features/fan-site-kit).
+- Ink well image used under Creative Commons licence from [pngall.com](http://www.pngall.com/?p=26696). 
 ### Acknowledgements
