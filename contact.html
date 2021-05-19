@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="SpellBook Contact page, a form to provide feedback and contact the site owner" />
+    <title>Contact | SpellBook</title>
     <!-- Favicon - made with favicongenerator.com -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Bootstrap CDN -->
@@ -19,8 +20,15 @@
     <!-- DataTables CDN -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/bs4/dt-1.10.24/sc-2.0.3/datatables.min.css" />
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Contact | SpellBook</title>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_i6KqAoZ1e2jXs9RS6T5BG");
+        })();
+    </script>
 </head>
 
 <body>
