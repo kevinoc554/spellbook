@@ -49,6 +49,23 @@ $(document).ready(function () {
         }, 1000);
     });
 
-    // EmailJS Test
-    // emailjs.send("service_0mkicmg","template_1vpz1s8");
+    // EmailJS
+    $('#formTrigger').submit(function (event) {
+        event.preventDefault();
+        let fromName = $('#contactName').val();
+        let fromEmail = $('#contactEmail').val();
+        let fromMessage = $('#contactMessage').val();
+        let templateParams = {
+            from_name: fromName,
+            from_email: fromEmail,
+            message: fromMessage
+        }
+
+        emailjs.send("service_0mkicmg", "template_1vpz1s8", templateParams)
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
+    })
 });
