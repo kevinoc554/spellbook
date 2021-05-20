@@ -74,6 +74,11 @@ $(document).ready(function () {
                 console.log('SUCCESS!', response.status, response.text);
             }, function (error) {
                 console.log('FAILED...', error);
+                $('#submit-button').html(`
+                <button type="submit" class="btn btn-secondary btn-send-failed hvr-fade">
+                Sending failed <i class="fas fa-times-circle"></i>
+                </button>
+                `)
             });
     })
 });
