@@ -263,11 +263,6 @@ h3 {
     background-repeat: no-repeat;
 }
 
-/* .contact-img {
-    height: 60%;
-    width: 60%
-} */
-
 .form-title-row {
     padding-bottom: .5rem;
     padding-top: .5rem;
@@ -281,6 +276,20 @@ h3 {
     border-radius: 10px;
 }
 
+.btn-sending {
+    background-color: #c75d25;
+    border-color: #c75d25;
+}
+
+.btn-sent {
+    background-color: #4bb543;
+    border-color: #4bb543;
+}
+
+.btn-send-failed {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
 /* ---Media Queries--- */
 
 /* Styling for medium to large screens (tablets and up) */
