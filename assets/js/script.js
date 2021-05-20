@@ -69,9 +69,12 @@ $(document).ready(function () {
         }
 
         // Template ID may be changed for testing purposes. Correct ID is "template_1vpz1s8"
-        emailjs.send("service_0mkicmg", "template_1vpz1s", templateParams)
+        emailjs.send("service_0mkicmg", "template_1vpz1s8", templateParams)
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
+                // Clear inputs on success
+                $('#contactName, #contactEmail, #contactMessage').val('');
+                // Change to Sent button
                 $('#submit-button').html(`
                 <button type="submit" class="btn btn-secondary btn-sent hvr-fade">
                 Sent! <i class="fas fa-check-circle"></i>
@@ -79,6 +82,7 @@ $(document).ready(function () {
                 `)
             }, function (error) {
                 console.log('FAILED...', error);
+                // Change to Sending Failed button on error
                 $('#submit-button').html(`
                 <button type="submit" class="btn btn-secondary btn-send-failed hvr-fade">
                 Sending failed <i class="fas fa-times-circle"></i>
