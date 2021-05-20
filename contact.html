@@ -94,12 +94,15 @@
                         </div>
                         <div class="form-group">
                             <label for="contactMessage">Your Message:</label>
-                            <textarea rows="5" name="message" id="contactMessage" class="form-control" required></textarea>
+                            <textarea rows="5" name="message" id="contactMessage" class="form-control"
+                                required></textarea>
                         </div>
-                        <button type="submit" id="submit-button" class="btn btn-secondary hvr-fade">Send Message</button>
-                        <button type="submit" id="submit-button" class="btn btn-secondary btn-sending">Sending... <img src="assets/images/loading.gif" alt="sending..." height="21" width="21"></button>
-                        <button type="submit" id="submit-button" class="btn btn-secondary btn-sent">Sent! <i class="fas fa-check-circle"></i></button>
-                        <button type="submit" id="submit-button" class="btn btn-secondary btn-send-failed">Sending failed <i class="fas fa-times-circle"></i></button>
+                        <div id="submit-button">
+                            <button type="submit" class="btn btn-secondary hvr-fade">Send Message</button>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-secondary btn-sending">Sending... <img src="assets/images/loading.gif" alt="sending..." height="21" width="21"></button>
+                        <button type="submit" class="btn btn-secondary btn-sent">Sent! <i class="fas fa-check-circle"></i></button>
+                        <button type="submit" class="btn btn-secondary btn-send-failed">Sending failed <i class="fas fa-times-circle"></i></button> -->
                     </form>
                 </div>
             </div>

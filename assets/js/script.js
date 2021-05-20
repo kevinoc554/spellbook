@@ -52,6 +52,13 @@ $(document).ready(function () {
     // EmailJS
     $('#formTrigger').submit(function (event) {
         event.preventDefault();
+
+        $('#submit-button').html(`
+        <button type="submit" id="submit-button" class="btn btn-secondary btn-sending hvr-fade">
+        Sending... <img src="assets/images/loading.gif" alt="sending..." height="21" width="21">
+        </button>
+        `)
+
         let fromName = $('#contactName').val();
         let fromEmail = $('#contactEmail').val();
         let fromMessage = $('#contactMessage').val();
@@ -61,7 +68,8 @@ $(document).ready(function () {
             message: fromMessage
         }
 
-        emailjs.send("service_0mkicmg", "template_1vpz1s8", templateParams)
+        // Template ID changed for testing purposes. Correct ID is "template_1vpz1s8"
+        emailjs.send("service_0mkicmg", "template_1vpz1s", templateParams)
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
             }, function (error) {
