@@ -68,10 +68,15 @@ $(document).ready(function () {
             message: fromMessage
         }
 
-        // Template ID changed for testing purposes. Correct ID is "template_1vpz1s8"
+        // Template ID may be changed for testing purposes. Correct ID is "template_1vpz1s8"
         emailjs.send("service_0mkicmg", "template_1vpz1s", templateParams)
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
+                $('#submit-button').html(`
+                <button type="submit" class="btn btn-secondary btn-sent hvr-fade">
+                Sent! <i class="fas fa-check-circle"></i>
+                </button>
+                `)
             }, function (error) {
                 console.log('FAILED...', error);
                 $('#submit-button').html(`
