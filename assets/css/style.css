@@ -102,14 +102,14 @@ h3 {
 }
 
 /* ---Spell List--- */
-#spell-list {
+#spellList {
     border-bottom: 1px solid #343a40;
     padding-top: 1rem;
     padding-bottom: .5rem;
 }
 
 /* ---Spell Data--- */
-#spell-data {
+#spellData {
     padding-top: 1rem;
 }
 
@@ -288,7 +288,7 @@ h3 {
     border-radius: 10px;
 }
 
-#submit-button {
+#submitButton {
     text-align: center;
 }
 
@@ -340,7 +340,7 @@ h3 {
         padding-top: 1rem;
     }
 
-    #spell-list {
+    #spellList {
         border: none;
         border-right: 1px solid #343a40;
     }
@@ -365,7 +365,7 @@ h3 {
         width: 75%;
     }
 
-    #submit-button {
+    #submitButton {
         text-align: left;
     }
 }
@@ -384,7 +384,7 @@ h3 {
 
 /* Fix positioning for DataTables search bar on tablet only */
 @media (min-width: 767px) and (max-width: 1023px) {
-    #spell-list-table_wrapper>.row:first-child {
+    #spellListTable_wrapper>.row:first-child {
         max-width: 30%;
     }
 }

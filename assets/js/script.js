@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Trigger DataTables onload and sort by Level
-    $('#spell-list-table').DataTable({
+    $('#spellListTable').DataTable({
         "order": [1, 'asc'],
         "info": false,
         "paging": false
@@ -53,8 +53,8 @@ $(document).ready(function () {
     $('#formTrigger').submit(function (event) {
         event.preventDefault();
 
-        $('#submit-button').html(`
-        <button type="submit" id="submit-button" class="btn btn-secondary btn-sending hvr-fade">
+        $('#submitButton').html(`
+        <button type="submit" id="submitButton" class="btn btn-secondary btn-sending hvr-fade">
         Sending... <img src="assets/images/loading.gif" alt="sending..." height="21" width="21">
         </button>
         `)
@@ -75,7 +75,7 @@ $(document).ready(function () {
                 // Clear inputs on success
                 $('#contactName, #contactEmail, #contactMessage').val('');
                 // Change to Sent button
-                $('#submit-button').html(`
+                $('#submitButton').html(`
                 <button type="submit" class="btn btn-secondary btn-sent hvr-fade">
                 Sent! <i class="fas fa-check-circle"></i>
                 </button>
@@ -83,7 +83,7 @@ $(document).ready(function () {
             }, function (error) {
                 console.log('FAILED...', error);
                 // Change to Sending Failed button on error
-                $('#submit-button').html(`
+                $('#submitButton').html(`
                 <button type="submit" class="btn btn-secondary btn-send-failed hvr-fade">
                 Sending failed <i class="fas fa-times-circle"></i>
                 </button>
