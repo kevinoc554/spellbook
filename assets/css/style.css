@@ -276,11 +276,14 @@ h3 {
     border-radius: 10px;
 }
 
+#submit-button {
+    text-align: center;
+}
+
 .btn-sending {
     background-color: #c75d25;
     border-color: #c75d25;
 }
-
 
 .btn-sent {
     background-color: #4bb543;
@@ -343,6 +346,10 @@ h3 {
 
     .form-control {
         width: 75%;
+    }
+
+    #submit-button {
+        text-align: left;
     }
 }
 /* Styling for large screens (laptops and up) */
