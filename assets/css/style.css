@@ -322,6 +322,21 @@ h3 {
     color: #fafafa;
 }
 
+/* ---404 Page--- */
+.error-main {
+    background-color: #b4a0ab80;
+    text-align: center;
+    min-height: 78vh
+}
+
+.error-header {
+    margin-top: 3rem;
+}
+
+.error-text {
+    padding: .5rem;
+}
+
 /* ---Media Queries--- */
 
 /* Styling for medium to large screens (tablets and up) */
