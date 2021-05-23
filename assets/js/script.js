@@ -33,6 +33,18 @@ $(document).ready(function () {
         $('#damagesText').slideToggle();
     });
 
+    // Set background image of class icon divs
+    $('.class-icon').each(function() {
+        let classValue = $(this).next('span').text().toLowerCase();
+        let backgroundUrl = `assets/images/${classValue}-icon.jpg`;
+        $(this).css('background-image', "url("+backgroundUrl+")");
+    });
+    
+    // let classValue = $('.class-icon-bard').next().text().toLowerCase();
+    // let backgroundUrl = `assets/images/${classValue}-icon.jpg`;
+    // $('.class-icon-bard').css('background-image', "url("+backgroundUrl+")");
+    
+
     // Fade Return to Top button in and out
     $(window).scroll(function () {
         if ($(this).scrollTop() > 150) {

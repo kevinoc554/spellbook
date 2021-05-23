@@ -354,6 +354,15 @@ h3 {
         padding-top: 1rem;
     }
 
+    .class-icon {
+        height: 150px;
+        width: 150px;
+    }
+    
+    /* .class-icon-bard {
+        background-image: url('../images/bard-icon.jpg');
+    } */
+
     #spellList {
         border: none;
         border-right: 1px solid #343a40;
