@@ -98,3 +98,25 @@ $(document).ready(function () {
             });
     })
 });
+
+function getData(type, cb) {
+    let xhr = new XMLHttpRequest;
+    let baseUrl = 'https://www.dnd5eapi.co/api/';
+    xhr.open('GET', baseUrl + 'classes/' + type + '/spells');
+    xhr.send();
+
+    xhr.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let testData = JSON.parse(this.responseText);
+            cb(testData);
+        }
+    }
+};
+
+function writeClassListToDocument(type) {
+    getData(type, function (data) {
+        $('#api-test-div').html(`
+        <p>Count: ${data.count}</p>
+        `)
+    })
+};
