@@ -339,7 +339,7 @@ h3 {
 
 /* ---Media Queries--- */
 
-/* Styling for medium to large screens (tablets and up) */
+/* Medium to large screens (tablets and up) */
 @media (min-width: 576px) {
     .navbar {
         padding-left: 1rem;
@@ -351,7 +351,6 @@ h3 {
 
     .class-icons-row .list-inline .list-inline-item {
         border: none;
-        margin: 0;
         padding-top: 1rem;
     }
 
@@ -385,7 +384,7 @@ h3 {
     }
 }
 
-/* Styling for large screens (laptops and up) */
+/* Large screens (laptops and up) */
 @media (min-width: 991.98px) {
     .nav-item:not(:last-child) {
         border-right: 1px solid #ffffff80;
@@ -397,17 +396,27 @@ h3 {
     }
 }
 
-/* Fix positioning for DataTables search bar on tablet only */
+/* Tablet screens only */
 @media (min-width: 767px) and (max-width: 1023px) {
     #spellListTable_wrapper>.row:first-child {
         max-width: 30%;
     }
+
+    .class-icons-row .list-inline .list-inline-item {
+        border: none;
+        margin: .5rem;
+        padding-top: 1rem;
+    }
 }
 
-/* Adjust BG Image positioning on larger screens */
+/* Largest screens */
 @media (min-width: 1440px) {
     .jumbotron {
         background-position: 50% 40%;
+    }
+
+    .class-icons-row .list-inline .list-inline-item {
+        margin-right: 3rem;
     }
 }
 
