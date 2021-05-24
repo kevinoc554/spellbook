@@ -99,6 +99,7 @@ $(document).ready(function () {
     })
 });
 
+
 function getData(type, cb) {
     let xhr = new XMLHttpRequest;
     let baseUrl = 'https://www.dnd5eapi.co/api/';
@@ -120,3 +121,18 @@ function writeClassListToDocument(type) {
         `)
     })
 };
+
+// $('.class-icon').click(function () {
+//     let type = $(this).next('span').text().toLowerCase();
+//     writeClassListToDocument(type);
+// })
+
+// $('.class-link').click(function () {
+//     let type = $(".class-link > span").text().toLowerCase();
+//     writeClassListToDocument(type);
+// });
+
+$('.class-link').click(function () {
+    let type = $(this).children("span").text().toLowerCase();
+    writeClassListToDocument(type);
+});
