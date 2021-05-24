@@ -118,11 +118,15 @@ function getData(type) {
                 }
             })
             spellDiv += `</ul>`
-            $('#api-test-div').html(spellDiv);
+            $('#spellListText').html(spellDiv);
         })
 }
 
 $('.class-link').click(function () {
     let type = $(this).children("span").text().toLowerCase();
+    $('#spellListHeading').html(`
+    <h2 class="text-center">Spell List</h2>
+    <hr class="spell-hr">
+    <h3 class="text-capitalize">${type} Spells:</h3>`)
     getData(type);
 });
