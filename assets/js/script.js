@@ -99,40 +99,29 @@ $(document).ready(function () {
     })
 });
 
+// Testing API hookup
+const baseUrl = 'https://www.dnd5eapi.co/api/';
 
-function getData(type, cb) {
-    let xhr = new XMLHttpRequest;
-    let baseUrl = 'https://www.dnd5eapi.co/api/';
-    xhr.open('GET', baseUrl + 'classes/' + type + '/spells');
-    xhr.send();
-
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            let testData = JSON.parse(this.responseText);
-            cb(testData);
-        }
-    }
-};
-
-function writeClassListToDocument(type) {
-    getData(type, function (data) {
-        $('#api-test-div').html(`
-        <p>Count: ${data.count}</p>
-        `)
-    })
-};
-
-// $('.class-icon').click(function () {
-//     let type = $(this).next('span').text().toLowerCase();
-//     writeClassListToDocument(type);
-// })
-
-// $('.class-link').click(function () {
-//     let type = $(".class-link > span").text().toLowerCase();
-//     writeClassListToDocument(type);
-// });
+function getData(type) {
+    let classUrl = baseUrl + 'classes/' + type + '/spells';
+    $.when(
+        $.getJSON(classUrl)
+    ).then(
+        function (data) {
+            let spellList = data.results;
+            let spellDiv = `<ul>`
+            $(spellList).each(function (i) {
+                spellDiv += `<li>${this.name}</li>`
+                if (i == 10) {
+                    return false
+                }
+            })
+            spellDiv += `</ul>`
+            $('#api-test-div').html(spellDiv);
+        })
+}
 
 $('.class-link').click(function () {
     let type = $(this).children("span").text().toLowerCase();
-    writeClassListToDocument(type);
+    getData(type);
 });
