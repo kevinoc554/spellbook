@@ -110,15 +110,28 @@ function getData(type) {
     ).then(
         function (data) {
             let spellList = data.results;
-            let spellDiv = `<ul>`
+            let spellDiv = `
+            <table class="table table-hover" id="spellListTable">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Spell Name</th>
+                    </tr>
+                </thead>
+                <tbody>`
             $(spellList).each(function (i) {
-                spellDiv += `<li>${this.name}</li>`
-                if (i == 10) {
-                    return false
-                }
+                spellDiv += `
+                <tr>
+                    <th scope="row">${this.name}</th>
+                </tr>`
+                // if (i == 10) {
+                //     return false
+                // }
             })
-            spellDiv += `</ul>`
+            spellDiv += `
+                </tbody>
+            </table>`
             $('#spellListText').html(spellDiv);
+            $('#spellListTable').DataTable();
         })
 }
 
