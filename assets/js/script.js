@@ -1,10 +1,10 @@
+// Fetch Bard data by default and write to DOM on load
 $(document).ready(function () {
-    // Trigger DataTables onload and sort by Level
-    $('#spellListTable').DataTable({
-        "order": [1, 'asc'],
-        "info": false,
-        "paging": false
-    });
+    $('#spellListHeading').html(`
+    <h2 class="text-center">Spell List</h2>
+    <hr class="spell-hr">
+    <h3 class="text-capitalize">Bard Spells:</h3>`)
+    getClassData('bard');
 });
 
 // Offcanvas effect on navbar adapted from Bootstrap
@@ -103,7 +103,7 @@ $('#formTrigger').submit(function (event) {
 // Testing API hookup
 const baseUrl = 'https://www.dnd5eapi.co/api/';
 
-function getData(type) {
+function getClassData(type) {
     let classUrl = baseUrl + 'classes/' + type + '/spells';
     $.when(
         $.getJSON(classUrl)
@@ -123,7 +123,8 @@ function getData(type) {
                 <tr>
                     <th scope="row">${this.name}</th>
                 </tr>`
-                // if (i == 10) {
+                // Limit no of results for testing purposes
+                // if (i == 9) {
                 //     return false
                 // }
             })
@@ -131,7 +132,9 @@ function getData(type) {
                 </tbody>
             </table>`
             $('#spellListText').html(spellDiv);
-            $('#spellListTable').DataTable();
+            $('#spellListTable').DataTable({
+                "info": false
+            });
         })
 }
 
@@ -141,5 +144,5 @@ $('.class-link').click(function () {
     <h2 class="text-center">Spell List</h2>
     <hr class="spell-hr">
     <h3 class="text-capitalize">${type} Spells:</h3>`)
-    getData(type);
+    getClassData(type);
 });
