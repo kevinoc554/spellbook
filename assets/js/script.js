@@ -100,9 +100,10 @@ $('#formTrigger').submit(function (event) {
 })
 
 
-// Testing API hookup
+// Dnd API
 const baseUrl = 'https://www.dnd5eapi.co/api/';
 
+// Class Spell List - fetch and write data to DOM
 function getClassData(type) {
     let classUrl = baseUrl + 'classes/' + type + '/spells';
     $.when(
@@ -121,7 +122,7 @@ function getClassData(type) {
             $(spellList).each(function (i) {
                 spellDiv += `
                 <tr>
-                    <th scope="row">${this.name}</th>
+                    <th scope="row" id="${this.index}">${this.name}</th>
                 </tr>`
                 // Limit no of results for testing purposes
                 // if (i == 9) {
@@ -136,8 +137,9 @@ function getClassData(type) {
                 "info": false
             });
         })
-}
+};
 
+// Click class icon to create class spell list table
 $('.class-link').click(function () {
     let type = $(this).children("span").text().toLowerCase();
     $('#spellListHeading').html(`
@@ -146,3 +148,23 @@ $('.class-link').click(function () {
     <h3 class="text-capitalize">${type} Spells:</h3>`)
     getClassData(type);
 });
+
+// Spell Data - fetch and write data to DOM
+function getSpellData(spellIndex) {
+    let spellUrl = baseUrl + 'spells/' + spellIndex;
+    $.when(
+        $.getJSON(spellUrl)
+    ).then(
+        function (data) {
+            console.log(data.name);
+            console.log(data.components)
+        }
+    )
+}
+
+// Click spell name to request spell data from API
+// Delegated event handler - event 'bubbles up' from th to #spellListText div
+$('#spellListText').on('click', 'th', function () {
+    let spellIndex = $(this).attr('id');
+    getSpellData(spellIndex);
+} );
