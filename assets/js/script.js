@@ -243,7 +243,7 @@ function getSpellData(spellIndex) {
             let altClasses = data.classes;
             $(altClasses).each(function () {
                 spellDataBlock += `
-                <span class="pointer">${this.name}</span>`
+                <span class="pointer classes-span" id="${this.index}">${this.name}</span>`
             });
             spellDataBlock += `
             </p>
@@ -260,3 +260,10 @@ $('#spellListText').on('click', 'th', function () {
     let spellIndex = $(this).attr('id');
     getSpellData(spellIndex);
 });
+
+// Get a new Class list when Class spans in Spell Data are clicked
+$('#spellData').on('click', '.classes-span', function (){
+    let type = $(this).attr('id');
+    getSpellListTitle(type);
+    getClassData(type);
+})
