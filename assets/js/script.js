@@ -1,10 +1,8 @@
-// Fetch Bard data by default and write to DOM on load
+// Fetch Bard spell list and first spell data by default and write to DOM on load
 $(document).ready(function () {
-    $('#spellListHeading').html(`
-    <h2 class="text-center">Spell List</h2>
-    <hr class="spell-hr">
-    <h3 class="text-capitalize">Bard Spells:</h3>`)
+    getSpellListTitle('bard');
     getClassData('bard');
+    getSpellData('animal-friendship');
 });
 
 // Offcanvas effect on navbar adapted from Bootstrap
@@ -137,12 +135,17 @@ function getClassData(type) {
 // Click class icon to create class spell list table
 $('.class-link').click(function () {
     let type = $(this).children("span").text().toLowerCase();
+    getSpellListTitle(type);
+    getClassData(type);
+});
+
+// Create Spell List Title from Class Icon Span
+function getSpellListTitle(type) {
     $('#spellListHeading').html(`
     <h2 class="text-center">Spell List</h2>
     <hr class="spell-hr">
     <h3 class="text-capitalize">${type} Spells:</h3>`)
-    getClassData(type);
-});
+}
 
 // Spell Data - fetch and write data to DOM
 function getSpellData(spellIndex) {
