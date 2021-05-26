@@ -180,6 +180,53 @@ function getSpellData(spellIndex) {
             spellDataBlock += `
                     </ul>
                 </div>
+            <div class="col-12 col-md-6">
+                            <ul class="spell-trait-list list-unstyled">
+                                <li><span class="font-weight-bold">Range:</span> ${data.range}</li>
+                                <li><span class="font-weight-bold">Duration:</span> ${data.duration}</li>`
+            if (data.concentration) {
+                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> Yes</li>`
+            } else {
+                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> No</li>`
+            }
+            // If spell does damage
+            if (data.damage) {
+                spellDataBlock += `
+                <li>
+                        <span class="font-weight-bold">Damage:</span> ${data.damage.damage_type.name}`
+                // If cantrip/level 0
+                if (data.damage.damage_at_character_level) {
+                    spellDataBlock += `
+                        <p class="font-weight-bold">Damage per character level: 
+                            <i id="damageListToggle" class="fas fa-chevron-up pointer"></i>
+                        </p>
+                        <ol id="damagesText">
+                            <li value="1">${data.damage.damage_at_character_level['1']}</li>
+                            <li value="5">${data.damage.damage_at_character_level['5']}</li>
+                            <li value="11">${data.damage.damage_at_character_level['11']}</li>
+                            <li value="17">${data.damage.damage_at_character_level['17']}</li>`
+                } else {
+                    // If regular levelled spell
+                    spellDataBlock += `
+                    <p class="font-weight-bold">Damage per spell level: 
+                        <i id="damageListToggle" class="fas fa-chevron-up pointer"></i>
+                    </p>
+                    <ol id="damagesText" start="${data.level}">`
+                    let spellDamageObj = data.damage.damage_at_slot_level
+                    let spellDamageList = Object.values(spellDamageObj)
+                    $(spellDamageList).each(function () {
+                        spellDataBlock += `
+                            <li>${this}</li>`
+                    });
+                    spellDataBlock += `
+                            </ol>
+                        </li>`
+                }
+            }
+
+            spellDataBlock += `
+                    </ul>
+                </div>
             </div>`
             $('#spellData').html(spellDataBlock);
         }
