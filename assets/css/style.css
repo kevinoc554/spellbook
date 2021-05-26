@@ -31,6 +31,10 @@ h3 {
     background-color: #291c1b !important;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 /* ---Navbar--- */
 .navbar {
     padding-left: 0;
