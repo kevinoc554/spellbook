@@ -156,8 +156,37 @@ function getSpellData(spellIndex) {
         $.getJSON(spellUrl)
     ).then(
         function (data) {
-            console.log(data.name);
-            console.log(data.components)
+            let spellDataBlock = `
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">Spell Info</h2>
+                    <hr class="spell-hr">
+                </div>
+                <div class="col-12">
+                    <h3 class="spell-name text-center">${data.name}</h3>
+                </div>
+                <div class="col-12 col-md-6">
+                            <ul class="spell-trait-list list-unstyled">
+                                <li><span class="font-weight-bold">Level:</span> ${data.level}</li>
+                                <li><span class="font-weight-bold">Casting Time:</span> ${data.casting_time}</li>`
+            if (data.ritual) {
+                spellDataBlock += `<li><span class="font-weight-bold">Ritual:</span> Yes</li>`
+            } else {
+                spellDataBlock += `<li><span class="font-weight-bold">Ritual:</span> No</li>`
+            }
+            spellDataBlock += `
+            <li>
+                <span class="font-weight-bold">Components:</span> ${data.components}
+                <p class="font-weight-bold">
+                    Materials: <i id="materialsListToggle" class="fas fa-chevron-up pointer"></i>
+                </p>
+                <p id="materialsText" class="font-italic">${data.material}</p>
+            </li>`
+            spellDataBlock += `
+                    </ul>
+                </div>
+            </div>`
+            $('#spellData').html(spellDataBlock);
         }
     )
 }
@@ -167,4 +196,4 @@ function getSpellData(spellIndex) {
 $('#spellListText').on('click', 'th', function () {
     let spellIndex = $(this).attr('id');
     getSpellData(spellIndex);
-} );
+});
