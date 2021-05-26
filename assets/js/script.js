@@ -21,14 +21,14 @@ $('#instructionsToggle').click(function () {
 });
 
 // Manual toggle to show/hide Materials text
-$('#materialsListToggle').click(function () {
+$('#spellData').on('click', '#materialsListToggle', function () {
     $(this).toggleClass('fa-chevron-down');
     $(this).toggleClass('fa-chevron-up');
     $('#materialsText').slideToggle('fast');
 });
 
 // Manual toggle to show/hide Damages at higher levels text
-$('#damageListToggle').click(function () {
+$('#spellData').on('click', '#damageListToggle', function () {
     $(this).toggleClass('fa-chevron-down');
     $(this).toggleClass('fa-chevron-up');
     $('#damagesText').slideToggle();
