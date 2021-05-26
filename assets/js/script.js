@@ -76,7 +76,6 @@ $('#formTrigger').submit(function (event) {
         message: fromMessage
     }
 
-    // Template ID may be changed for testing purposes. Correct ID is "template_1vpz1s8"
     emailjs.send("service_0mkicmg", "template_1vpz1s8", templateParams)
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
@@ -124,10 +123,6 @@ function getClassData(type) {
                 <tr>
                     <th scope="row" id="${this.index}">${this.name}</th>
                 </tr>`
-                // Limit no of results for testing purposes
-                // if (i == 9) {
-                //     return false
-                // }
             })
             spellDiv += `
                 </tbody>
