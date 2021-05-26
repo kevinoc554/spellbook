@@ -223,11 +223,29 @@ function getSpellData(spellIndex) {
                         </li>`
                 }
             }
-
             spellDataBlock += `
                     </ul>
                 </div>
-            </div>`
+                <div class="col-12">
+                    <h4 class="font-weight-bold">Description</h4>
+                        <p>${data.desc}</p>`
+            if (data.higher_level) {
+                spellDataBlock += `
+                <h5 class="font-weight-bold">At Higher Levels:</h5>
+                <p>${data.higher_level}</p>`
+            }
+            spellDataBlock += `
+            <p class="spell-data-classes">
+                <span class="font-weight-bold">Classes:</span>`
+            let altClasses = data.classes;
+            $(altClasses).each(function () {
+                spellDataBlock += `
+                <span class="pointer">${this.name}</span>`
+            });
+            spellDataBlock += `
+            </p>
+                </div>`
+            spellDataBlock += `</div>`
             $('#spellData').html(spellDataBlock);
         }
     )
