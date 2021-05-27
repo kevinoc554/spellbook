@@ -3,6 +3,7 @@ $(document).ready(function () {
     getSpellListTitle('bard');
     getClassData('bard');
     getSpellData('animal-friendship');
+    toggleActiveIcon($('.class-link:first'));
 });
 
 // Offcanvas effect on navbar adapted from Bootstrap
@@ -135,8 +136,6 @@ function getClassData(type) {
 // Click class icon to create class spell list table
 $('.class-link').click(function () {
     let type = $(this).children("span").text().toLowerCase();
-    // $('#activeClassIcon').attr('id', '')
-    // $(this).parent().attr('id', 'activeClassIcon')
     toggleActiveIcon($(this));
     getSpellListTitle(type);
     getClassData(type);
@@ -145,11 +144,6 @@ $('.class-link').click(function () {
 function toggleActiveIcon(thisObj) {
     $('#activeClassIcon').attr('id', '')
     thisObj.parent().attr('id', 'activeClassIcon')
-}
-
-function setActiveClass() {
-    $('.class-link-active').toggleClass('.class-link-active');
-    $(this).parent().toggleClass('.class-link-active');
 }
 
 // Create Spell List Title from Class Icon Span
