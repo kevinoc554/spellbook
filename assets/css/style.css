@@ -266,12 +266,12 @@ li .components-span:not(:last-of-type):after {
 
 .about-contents {
     background-color: #b4a0ab80;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .about-info {
     background-color: #cbc2b180;
-    z-index: -1;
+    z-index: 0;
     padding-top: .5rem;
 }
 
