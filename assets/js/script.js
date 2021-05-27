@@ -232,10 +232,16 @@ function getSpellData(spellIndex) {
             }
             spellDataBlock += `
                     </ul>
-                </div>
-                <div class="col-12">
-                    <h4 class="font-weight-bold">Description</h4>
-                        <p>${data.desc}</p>`
+                </div>`
+            
+            spellDataBlock += `<div class="col-12">
+                <h4 class="font-weight-bold">Description</h4>`
+            
+            let spellDesc = data.desc;
+            $(spellDesc).each(function () {
+                spellDataBlock += `<p>${this}</p>`
+            })
+            
             if (data.higher_level) {
                 spellDataBlock += `
                 <h5 class="font-weight-bold">At Higher Levels:</h5>
