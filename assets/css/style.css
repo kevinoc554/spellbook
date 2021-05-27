@@ -141,6 +141,7 @@ li .components-span::before {
     content: ' ';
 }
 
+p .classes-span:not(:last-of-type):after,
 li .components-span:not(:last-of-type):after {
     content: ",";
 }
