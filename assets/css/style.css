@@ -95,8 +95,12 @@ h3 {
     margin-bottom: .5rem;
 }
 
-.class-icons-row .list-inline .list-inline-item a {
-    color: #291c1b;
+/* .class-link {
+} */
+
+#activeClassIcon {
+    color: #fafafa!important;
+    background-color: #291c1b!important;
 }
 
 /* ---Spell Row--- */
