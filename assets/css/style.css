@@ -137,6 +137,14 @@ h3 {
     text-decoration: underline;
 }
 
+li .components-span::before {
+    content: ' ';
+}
+
+li .components-span:not(:last-of-type):after {
+    content: ",";
+}
+
 #materialsText,
 #damagesText {
     display: none;

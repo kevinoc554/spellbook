@@ -174,8 +174,12 @@ function getSpellData(spellIndex) {
             }
             spellDataBlock += `
             <li>
-                <span class="font-weight-bold">Components:</span> ${data.components}
-                <p class="font-weight-bold">
+                <span class="font-weight-bold">Components:</span>`
+            let spellComponents = data.components;
+            $(spellComponents).each(function () {
+                spellDataBlock += `<span class="components-span">${this}</span>`
+            })
+            spellDataBlock += `<p class="font-weight-bold">
                     Materials: <i id="materialsListToggle" class="fas fa-chevron-up pointer"></i>
                 </p>
                 <p id="materialsText" class="font-italic">${data.material}</p>
