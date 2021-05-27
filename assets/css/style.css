@@ -89,18 +89,19 @@ h3 {
     text-align: center;
     border: 2px solid #291c1b;
     border-radius: 10px;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
     margin: 0;
     margin-bottom: .5rem;
 }
 
-/* .class-link {
-} */
+.class-icons-row .list-inline .list-inline-item:hover {
+    background-color: #291c1b40;
+}
 
 #activeClassIcon {
-    color: #fafafa!important;
-    background-color: #291c1b!important;
+    color: #fafafa !important;
+    background-color: #291c1b !important;
 }
 
 /* ---Spell Row--- */
@@ -370,12 +371,18 @@ li .components-span:not(:last-of-type):after {
 
     .class-icons-row .list-inline .list-inline-item {
         border: none;
-        padding-top: 1rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
     }
 
     .class-icon {
         height: 150px;
         width: 150px;
+    }
+
+    #activeClassIcon {
+        color: #fafafa !important;
+        background-color: #291c1b90 !important;
     }
 
     #spellList {
