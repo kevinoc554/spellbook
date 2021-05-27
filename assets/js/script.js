@@ -179,12 +179,15 @@ function getSpellData(spellIndex) {
             $(spellComponents).each(function () {
                 spellDataBlock += `<span class="components-span">${this}</span>`
             })
-            spellDataBlock += `<p class="font-weight-bold">
+            if (data.material) {
+                spellDataBlock += `<p class="font-weight-bold">
                     Materials: <i id="materialsListToggle" class="fas fa-chevron-up pointer"></i>
                 </p>
                 <p id="materialsText" class="font-italic">${data.material}</p>
-            </li>`
+            `
+            }
             spellDataBlock += `
+                        </li>        
                     </ul>
                 </div>
             <div class="col-12 col-md-6">
@@ -233,15 +236,15 @@ function getSpellData(spellIndex) {
             spellDataBlock += `
                     </ul>
                 </div>`
-            
+
             spellDataBlock += `<div class="col-12">
                 <h4 class="font-weight-bold">Description</h4>`
-            
+
             let spellDesc = data.desc;
             $(spellDesc).each(function () {
                 spellDataBlock += `<p>${this}</p>`
             })
-            
+
             if (data.higher_level) {
                 spellDataBlock += `
                 <h5 class="font-weight-bold">At Higher Levels:</h5>
@@ -272,7 +275,7 @@ $('#spellListText').on('click', 'th', function () {
 });
 
 // Get a new Class list when Class spans in Spell Data are clicked
-$('#spellData').on('click', '.classes-span', function (){
+$('#spellData').on('click', '.classes-span', function () {
     let type = $(this).attr('id');
     getSpellListTitle(type);
     getClassData(type);
