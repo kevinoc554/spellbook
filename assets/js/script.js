@@ -132,6 +132,9 @@ function getClassData(type) {
             $('#spellListTable').DataTable({
                 "info": false
             });
+            // Fix issue with labels above table displaying incorrectly
+            $('#spellListTable_length').parent().removeClass('col-md-6');
+            $('#spellListTable_length').parent().addClass('col-lg-6');
         });
 }
 
