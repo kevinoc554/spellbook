@@ -287,13 +287,21 @@ $('#spellData').on('click', '.classes-span', function () {
     let type = $(this).attr('id');
     getSpellListTitle(type);
     getClassData(type);
+    toggleActiveClassFromSpan(type)
 });
 
-// Toggle active class icon
+// Toggle active class icon - from Class Icon Row
 function toggleActiveIcon(thisObj) {
     $('#activeClassIcon').attr('id', '');
     thisObj.parent().attr('id', 'activeClassIcon');
 }
+
+// Toggle active class icon - from Class span in Spell Data
+function toggleActiveClassFromSpan(type) {
+    $('#activeClassIcon').attr('id', '');
+    $(`.class-icon-${type}`).parents('li').attr('id', 'activeClassIcon');
+}
+
 
 // Toggle active spell row in table
 function toggleActiveSpell(thisObj){
