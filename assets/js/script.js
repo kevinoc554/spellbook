@@ -1,3 +1,5 @@
+//jshint esversion: 6
+
 // Fetch Bard spell list and first spell data by default and write to DOM on load
 $(document).ready(function () {
     getSpellListTitle('bard');
@@ -47,7 +49,7 @@ $(window).scroll(function () {
     } else {
         $('#toTopBtn').fadeOut();
     }
-})
+});
 
 // Smooth scroll to top when btn is clicked
 $('#toTopBtn').click(function () {
@@ -56,7 +58,7 @@ $('#toTopBtn').click(function () {
     }, 1000);
 });
 
-// EmailJS
+// EmailJS - emailjs is defined externally
 $('#formTrigger').submit(function (event) {
     event.preventDefault();
 
@@ -64,7 +66,7 @@ $('#formTrigger').submit(function (event) {
         <button type="submit" id="submitButton" class="btn btn-secondary btn-sending hvr-fade">
         Sending... <img src="assets/images/loading.gif" alt="sending..." height="21" width="21">
         </button>
-        `)
+        `);
 
     let fromName = $('#contactName').val();
     let fromEmail = $('#contactEmail').val();
@@ -73,7 +75,7 @@ $('#formTrigger').submit(function (event) {
         from_name: fromName,
         from_email: fromEmail,
         message: fromMessage
-    }
+    };
 
     emailjs.send("service_0mkicmg", "template_1vpz1s8", templateParams)
         .then(function (response) {
@@ -85,7 +87,7 @@ $('#formTrigger').submit(function (event) {
                 <button type="submit" class="btn btn-secondary btn-sent hvr-fade">
                 Sent! <i class="fas fa-check-circle"></i>
                 </button>
-                `)
+                `);
         }, function (error) {
             console.log('FAILED...', error);
             // Change to Sending Failed button on error
@@ -93,9 +95,9 @@ $('#formTrigger').submit(function (event) {
                 <button type="submit" class="btn btn-secondary btn-send-failed hvr-fade">
                 Sending failed <i class="fas fa-times-circle"></i>
                 </button>
-                `)
+                `);
         });
-})
+});
 
 
 // Dnd API
@@ -116,22 +118,22 @@ function getClassData(type) {
                         <th scope="col">Spell Name</th>
                     </tr>
                 </thead>
-                <tbody>`
+                <tbody>`;
             $(spellList).each(function (i) {
                 spellDiv += `
                 <tr>
                     <th scope="row" id="${this.index}">${this.name}</th>
-                </tr>`
-            })
+                </tr>`;
+            });
             spellDiv += `
                 </tbody>
-            </table>`
+            </table>`;
             $('#spellListText').html(spellDiv);
             $('#spellListTable').DataTable({
                 "info": false
             });
-        })
-};
+        });
+}
 
 // Click class icon to create class spell list table
 $('.class-link').click(function () {
@@ -142,8 +144,8 @@ $('.class-link').click(function () {
 });
 
 function toggleActiveIcon(thisObj) {
-    $('#activeClassIcon').attr('id', '')
-    thisObj.parent().attr('id', 'activeClassIcon')
+    $('#activeClassIcon').attr('id', '');
+    thisObj.parent().attr('id', 'activeClassIcon');
 }
 
 // Create Spell List Title from Class Icon Span
@@ -151,7 +153,7 @@ function getSpellListTitle(type) {
     $('#spellListHeading').html(`
     <h2 class="text-center">Spell List</h2>
     <hr class="spell-hr">
-    <h3 class="text-capitalize">${type} Spells:</h3>`)
+    <h3 class="text-capitalize">${type} Spells:</h3>`);
 }
 
 // Spell Data - fetch and write data to DOM
@@ -173,25 +175,25 @@ function getSpellData(spellIndex) {
                 <div class="col-12 col-md-6">
                             <ul class="spell-trait-list list-unstyled">
                                 <li><span class="font-weight-bold">Level:</span> ${data.level}</li>
-                                <li><span class="font-weight-bold">Casting Time:</span> ${data.casting_time}</li>`
+                                <li><span class="font-weight-bold">Casting Time:</span> ${data.casting_time}</li>`;
             if (data.ritual) {
-                spellDataBlock += `<li><span class="font-weight-bold">Ritual:</span> Yes</li>`
+                spellDataBlock += `<li><span class="font-weight-bold">Ritual:</span> Yes</li>`;
             } else {
-                spellDataBlock += `<li><span class="font-weight-bold">Ritual:</span> No</li>`
+                spellDataBlock += `<li><span class="font-weight-bold">Ritual:</span> No</li>`;
             }
             spellDataBlock += `
             <li>
-                <span class="font-weight-bold">Components:</span>`
+                <span class="font-weight-bold">Components:</span>`;
             let spellComponents = data.components;
             $(spellComponents).each(function () {
-                spellDataBlock += `<span class="components-span">${this}</span>`
-            })
+                spellDataBlock += `<span class="components-span">${this}</span>`;
+            });
             if (data.material) {
                 spellDataBlock += `<p class="font-weight-bold">
                     Materials: <i id="materialsListToggle" class="fas fa-chevron-up pointer"></i>
                 </p>
                 <p id="materialsText" class="font-italic">${data.material}</p>
-            `
+            `;
             }
             spellDataBlock += `
                         </li>        
@@ -200,17 +202,17 @@ function getSpellData(spellIndex) {
             <div class="col-12 col-md-6">
                             <ul class="spell-trait-list list-unstyled">
                                 <li><span class="font-weight-bold">Range:</span> ${data.range}</li>
-                                <li><span class="font-weight-bold">Duration:</span> ${data.duration}</li>`
+                                <li><span class="font-weight-bold">Duration:</span> ${data.duration}</li>`;
             if (data.concentration) {
-                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> Yes</li>`
+                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> Yes</li>`;
             } else {
-                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> No</li>`
+                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> No</li>`;
             }
             // If spell does damage
             if (data.damage) {
                 spellDataBlock += `
                 <li>
-                        <span class="font-weight-bold">Damage:</span> ${data.damage.damage_type.name}`
+                        <span class="font-weight-bold">Damage:</span> ${data.damage.damage_type.name}`;
                 // If cantrip/level 0
                 if (data.damage.damage_at_character_level) {
                     spellDataBlock += `
@@ -221,57 +223,57 @@ function getSpellData(spellIndex) {
                             <li value="1">${data.damage.damage_at_character_level['1']}</li>
                             <li value="5">${data.damage.damage_at_character_level['5']}</li>
                             <li value="11">${data.damage.damage_at_character_level['11']}</li>
-                            <li value="17">${data.damage.damage_at_character_level['17']}</li>`
+                            <li value="17">${data.damage.damage_at_character_level['17']}</li>`;
                 } else {
                     // If regular levelled spell
                     spellDataBlock += `
                     <p class="font-weight-bold">Damage per spell level: 
                         <i id="damageListToggle" class="fas fa-chevron-up pointer"></i>
                     </p>
-                    <ol id="damagesText" start="${data.level}">`
-                    let spellDamageObj = data.damage.damage_at_slot_level
-                    let spellDamageList = Object.values(spellDamageObj)
+                    <ol id="damagesText" start="${data.level}">`;
+                    let spellDamageObj = data.damage.damage_at_slot_level;
+                    let spellDamageList = Object.values(spellDamageObj);
                     $(spellDamageList).each(function () {
                         spellDataBlock += `
-                            <li>${this}</li>`
+                            <li>${this}</li>`;
                     });
                     spellDataBlock += `
                             </ol>
-                        </li>`
+                        </li>`;
                 }
             }
             spellDataBlock += `
                     </ul>
-                </div>`
+                </div>`;
 
             spellDataBlock += `<div class="col-12">
-                <h4 class="font-weight-bold">Description</h4>`
+                <h4 class="font-weight-bold">Description</h4>`;
 
             let spellDesc = data.desc;
             $(spellDesc).each(function () {
-                spellDataBlock += `<p>${this}</p>`
-            })
+                spellDataBlock += `<p>${this}</p>`;
+            });
 
             if (data.higher_level) {
                 spellDataBlock += `
                 <h5 class="font-weight-bold">At Higher Levels:</h5>
-                <p>${data.higher_level}</p>`
+                <p>${data.higher_level}</p>`;
             }
             spellDataBlock += `
             <p class="spell-data-classes">
-                <span class="font-weight-bold">Classes:</span>`
+                <span class="font-weight-bold">Classes:</span>`;
             let altClasses = data.classes;
             $(altClasses).each(function () {
                 spellDataBlock += `
-                <span class="pointer classes-span" id="${this.index}">${this.name}</span>`
+                <span class="pointer classes-span" id="${this.index}">${this.name}</span>`;
             });
             spellDataBlock += `
             </p>
-                </div>`
-            spellDataBlock += `</div>`
+                </div>`;
+            spellDataBlock += `</div>`;
             $('#spellData').html(spellDataBlock);
         }
-    )
+    );
 }
 
 // Click spell name to request spell data from API
@@ -286,4 +288,4 @@ $('#spellData').on('click', '.classes-span', function () {
     let type = $(this).attr('id');
     getSpellListTitle(type);
     getClassData(type);
-})
+});
