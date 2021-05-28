@@ -119,6 +119,38 @@ h3 {
     padding-bottom: .5rem;
 }
 
+/* DataTables - Pagination */
+
+.page-link {
+    color: #c75d25;
+    background-color: #fafafa;
+}
+
+.page-link:hover {
+    color: #fafafa;
+    background-color: #c75d2580;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fafafa;
+    background-color: #c75d25;
+    border-color: #c75d25;
+}
+
+li.paginate_button {
+    display: none;
+}
+
+li.paginate_button.previous,
+li.paginate_button.next,
+li.paginate_button:nth-of-type(2),
+li.paginate_button.active,
+li.paginate_button:nth-last-of-type(2),
+li.paginate_button:nth-last-of-type(3) {
+    display: inline;
+}
+
 /* ---Spell Data--- */
 #spellData {
     padding-top: 1rem;
@@ -424,6 +456,10 @@ li .components-span:not(:last-of-type):after {
     .about-toc {
         font-size: 1.25rem;
         margin-top: 1rem;
+    }
+
+    li.paginate_button {
+        display: inline!important;
     }
 }
 
