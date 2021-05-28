@@ -146,11 +146,6 @@ $('.class-link').click(function () {
     getClassData(type);
 });
 
-function toggleActiveIcon(thisObj) {
-    $('#activeClassIcon').attr('id', '');
-    thisObj.parent().attr('id', 'activeClassIcon');
-}
-
 // Create Spell List Title from Class Icon Span
 function getSpellListTitle(type) {
     $('#spellListHeading').html(`
@@ -284,6 +279,7 @@ function getSpellData(spellIndex) {
 $('#spellListText').on('click', 'th', function () {
     let spellIndex = $(this).attr('id');
     getSpellData(spellIndex);
+    toggleActiveSpell($(this));
 });
 
 // Get a new Class list when Class spans in Spell Data are clicked
@@ -292,3 +288,15 @@ $('#spellData').on('click', '.classes-span', function () {
     getSpellListTitle(type);
     getClassData(type);
 });
+
+// Toggle active class icon
+function toggleActiveIcon(thisObj) {
+    $('#activeClassIcon').attr('id', '');
+    thisObj.parent().attr('id', 'activeClassIcon');
+}
+
+// Toggle active spell row in table
+function toggleActiveSpell(thisObj){
+    $('.active-spell-row').removeClass('active-spell-row');
+    thisObj.addClass('active-spell-row');
+}

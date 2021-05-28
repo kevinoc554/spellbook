@@ -119,6 +119,10 @@ h3 {
     padding-bottom: .5rem;
 }
 
+.active-spell-row {
+    background-color: #b4a0ab60;
+}
+
 /* DataTables - Pagination */
 
 .page-link {
