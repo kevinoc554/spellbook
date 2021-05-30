@@ -17,6 +17,7 @@ body {
 
 .brand-name,
 .spell-name,
+.spell-list-heading,
 h2,
 h1 {
     font-family: 'Aclonica', sans-serif;
@@ -117,6 +118,10 @@ h3 {
     border-bottom: 1px solid #343a40;
     padding-top: 1rem;
     padding-bottom: .5rem;
+}
+
+.spell-list-heading {
+    margin-bottom: 1rem;
 }
 
 .active-spell-row {

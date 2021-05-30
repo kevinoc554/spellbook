@@ -151,7 +151,7 @@ function getSpellListTitle(type) {
     $('#spellListHeading').html(`
     <h2 class="text-center">Spell List</h2>
     <hr class="spell-hr">
-    <h3 class="text-capitalize">${type} Spells:</h3>`);
+    <h3 class="text-capitalize text-center spell-list-heading">${type} Spells:</h3>`);
 }
 
 // Spell Data - fetch and write data to DOM
