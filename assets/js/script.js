@@ -151,6 +151,7 @@ $('.class-link').click(function () {
     toggleActiveIcon($(this));
     getSpellListTitle(type);
     getClassData(type);
+    scrollToDiv($(this));
 });
 
 // Create Spell List Title from Class Icon Span
@@ -309,9 +310,16 @@ function toggleActiveClassFromSpan(type) {
     $(`.class-icon-${type}`).parents('li').attr('id', 'activeClassIcon');
 }
 
-
 // Toggle active spell row in table
 function toggleActiveSpell(thisObj) {
     $('.active-spell-row').removeClass('active-spell-row');
     thisObj.addClass('active-spell-row');
+}
+
+// Smooth scroll to spell list on class icon click
+function scrollToDiv(thisObj) {
+    let targetElement = thisObj.attr('data-scroll');
+    let targetPosition = $(targetElement).offset();
+    targetPosition.top -= 90;
+    $('html, body').animate({ scrollTop: targetPosition.top }, 750);
 }
