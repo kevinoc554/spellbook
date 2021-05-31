@@ -302,7 +302,7 @@ $('#spellData').on('click', '.classes-span', function () {
     let type = $(this).attr('id');
     getSpellListTitle(type);
     getClassData(type);
-    toggleActiveClassFromSpan(type);
+    toggleActiveClassIcon(type);
     scrollToDiv($(this));
 });
 
