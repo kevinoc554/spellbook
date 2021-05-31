@@ -271,7 +271,7 @@ function getSpellData(spellIndex) {
             let altClasses = data.classes;
             $(altClasses).each(function () {
                 spellDataBlock += `
-                <span class="pointer classes-span" id="${this.index}">${this.name}</span>`;
+                <span class="pointer classes-span" id="${this.index}" data-scroll="#spellList">${this.name}</span>`;
             });
             spellDataBlock += `
             </p>
@@ -296,7 +296,8 @@ $('#spellData').on('click', '.classes-span', function () {
     let type = $(this).attr('id');
     getSpellListTitle(type);
     getClassData(type);
-    toggleActiveClassFromSpan(type)
+    toggleActiveClassFromSpan(type);
+    scrollToDiv($(this));
 });
 
 // Toggle active class icon - from Class Icon Row
