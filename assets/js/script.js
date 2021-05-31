@@ -2,9 +2,12 @@
 
 // Fetch Bard spell list and first spell data by default and write to DOM on load
 $(document).ready(function () {
-    getSpellListTitle('bard');
-    getClassData('bard');
-    getSpellData('animal-friendship');
+    onFirstLoad();
+    let firstClass = localStorage.getItem('class');
+    let firstSpell = localStorage.getItem('spell');
+    getSpellListTitle(firstClass);
+    getClassData(firstClass);
+    getSpellData(firstSpell);
     toggleActiveIcon($('.class-link:first'));
     console.log(localStorage.getItem('class'));
 });
@@ -171,6 +174,7 @@ function getSpellData(spellIndex) {
         $.getJSON(spellUrl)
     ).then(
         function (data) {
+            localStorage.setItem('spell', spellIndex);
             let spellDataBlock = `
             <div class="row">
                 <div class="col-12">
@@ -325,5 +329,14 @@ function scrollToDiv(thisObj) {
     let targetElement = thisObj.attr('data-scroll');
     let targetPosition = $(targetElement).offset();
     targetPosition.top -= 90;
-    $('html, body').animate({ scrollTop: targetPosition.top }, 750);
+    $('html, body').animate({
+        scrollTop: targetPosition.top
+    }, 750);
+}
+
+function onFirstLoad() {
+    if (localStorage.length < 1) {
+        localStorage.setItem('class', 'bard');
+        localStorage.setItem('spell', 'animal-friendship');
+    }
 }
