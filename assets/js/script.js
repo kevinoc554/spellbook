@@ -8,7 +8,7 @@ $(document).ready(function () {
     getSpellListTitle(firstClass);
     getClassData(firstClass);
     getSpellData(firstSpell);
-    toggleActiveIcon($('.class-link:first'));
+    toggleActiveClassIcon(firstClass)
     console.log(localStorage.getItem('class'));
 });
 
@@ -153,7 +153,7 @@ function getClassData(type) {
 // Click class icon to create class spell list table
 $('.class-link').click(function () {
     let type = $(this).children("span").text().toLowerCase();
-    toggleActiveIcon($(this));
+    toggleActiveClassIcon(type);
     getSpellListTitle(type);
     getClassData(type);
     scrollToDiv($(this));
@@ -306,14 +306,8 @@ $('#spellData').on('click', '.classes-span', function () {
     scrollToDiv($(this));
 });
 
-// Toggle active class icon - from Class Icon Row
-function toggleActiveIcon(thisObj) {
-    $('#activeClassIcon').attr('id', '');
-    thisObj.parent().attr('id', 'activeClassIcon');
-}
-
-// Toggle active class icon - from Class span in Spell Data
-function toggleActiveClassFromSpan(type) {
+// Toggle active class icon
+function toggleActiveClassIcon(type) {
     $('#activeClassIcon').attr('id', '');
     $(`.class-icon-${type}`).parents('li').attr('id', 'activeClassIcon');
 }
