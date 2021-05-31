@@ -1,6 +1,7 @@
 //jshint esversion: 6
 
-// Fetch Bard spell list and first spell data by default and write to DOM on load
+// Fetch last viewed spell list and spell data and write to DOM on load
+// If first visit, display first class and spell alphabetically
 $(document).ready(function () {
     onFirstLoad();
     let firstClass = localStorage.getItem('class');
@@ -8,8 +9,7 @@ $(document).ready(function () {
     getSpellListTitle(firstClass);
     getClassData(firstClass);
     getSpellData(firstSpell);
-    toggleActiveClassIcon(firstClass)
-    console.log(localStorage.getItem('class'));
+    toggleActiveClassIcon(firstClass);
 });
 
 // Offcanvas effect on navbar adapted from Bootstrap
