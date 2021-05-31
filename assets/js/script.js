@@ -128,7 +128,7 @@ function getClassData(type) {
                 $(spellList).each(function (i) {
                     spellDiv += `
                 <tr>
-                    <th scope="row" id="${this.index}">${this.name}</th>
+                    <th scope="row" id="${this.index}" data-scroll="#spellData">${this.name}</th>
                 </tr>`;
                 });
                 spellDiv += `
@@ -288,6 +288,7 @@ $('#spellListText').on('click', 'th', function () {
     let spellIndex = $(this).attr('id');
     getSpellData(spellIndex);
     toggleActiveSpell($(this));
+    scrollToDiv($(this));
 });
 
 // Get a new Class list when Class spans in Spell Data are clicked
