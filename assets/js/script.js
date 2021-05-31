@@ -110,8 +110,14 @@ function getClassData(type) {
         $.getJSON(classUrl)
     ).then(
         function (data) {
-            let spellList = data.results;
-            let spellDiv = `
+            if (data.count === 0) {
+                let noSpells = `
+                <p class="text-center">We do not currently have any spell info for this Class.</p>
+                <p class="text-center">Please select another Class from the row above.</p>`
+                $('#spellListText').html(noSpells);
+            } else {
+                let spellList = data.results;
+                let spellDiv = `
             <table class="table table-hover" id="spellListTable">
                 <thead class="thead-light">
                     <tr>
@@ -119,22 +125,23 @@ function getClassData(type) {
                     </tr>
                 </thead>
                 <tbody>`;
-            $(spellList).each(function (i) {
-                spellDiv += `
+                $(spellList).each(function (i) {
+                    spellDiv += `
                 <tr>
                     <th scope="row" id="${this.index}">${this.name}</th>
                 </tr>`;
-            });
-            spellDiv += `
+                });
+                spellDiv += `
                 </tbody>
             </table>`;
-            $('#spellListText').html(spellDiv);
-            $('#spellListTable').DataTable({
-                "info": false
-            });
-            // Fix issue with labels above table displaying incorrectly
-            $('#spellListTable_length').parent().removeClass('col-md-6');
-            $('#spellListTable_length').parent().addClass('col-lg-6');
+                $('#spellListText').html(spellDiv);
+                $('#spellListTable').DataTable({
+                    "info": false
+                });
+                // Fix issue with labels above table displaying incorrectly
+                $('#spellListTable_length').parent().removeClass('col-md-6');
+                $('#spellListTable_length').parent().addClass('col-lg-6');
+            }
         });
 }
 
@@ -304,7 +311,7 @@ function toggleActiveClassFromSpan(type) {
 
 
 // Toggle active spell row in table
-function toggleActiveSpell(thisObj){
+function toggleActiveSpell(thisObj) {
     $('.active-spell-row').removeClass('active-spell-row');
     thisObj.addClass('active-spell-row');
 }
