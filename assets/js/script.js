@@ -6,6 +6,7 @@ $(document).ready(function () {
     getClassData('bard');
     getSpellData('animal-friendship');
     toggleActiveIcon($('.class-link:first'));
+    console.log(localStorage.getItem('class'));
 });
 
 // Offcanvas effect on navbar adapted from Bootstrap
@@ -110,6 +111,7 @@ function getClassData(type) {
         $.getJSON(classUrl)
     ).then(
         function (data) {
+            localStorage.setItem('class', type);
             if (data.count === 0) {
                 let noSpells = `
                 <p class="text-center">We do not currently have any spell info for this Class.</p>
