@@ -6,6 +6,8 @@ $(document).ready(function () {
     onFirstLoad();
     let firstClass = localStorage.getItem('class');
     let firstSpell = localStorage.getItem('spell');
+    let hideInstructions = localStorage.getItem('hideInstructions');
+    hideInstructionsOnLoad(hideInstructions);
     getSpellListTitle(firstClass);
     getClassData(firstClass);
     getSpellData(firstSpell);
@@ -114,6 +116,7 @@ function getClassData(type) {
         $.getJSON(classUrl)
     ).then(
         function (data) {
+            // Log the selected class in local storage for future visits
             localStorage.setItem('class', type);
             if (data.count === 0) {
                 let noSpells = `
@@ -174,7 +177,10 @@ function getSpellData(spellIndex) {
         $.getJSON(spellUrl)
     ).then(
         function (data) {
+            // Log selected spell in local storage for next visit 
             localStorage.setItem('spell', spellIndex);
+            // Hide instructions text on future visits as user has interacted with the site 
+            localStorage.setItem('hideInstructions', 'yes');
             let spellDataBlock = `
             <div class="row">
                 <div class="col-12">
@@ -328,9 +334,19 @@ function scrollToDiv(thisObj) {
     }, 750);
 }
 
+function hideInstructionsOnLoad(instructions) {
+    if (instructions === 'yes') {
+        $('#instructionsToggle').toggleClass('fa-chevron-down');
+        $('#instructionsToggle').toggleClass('fa-chevron-up');
+        $('#instructionsText').css('display', 'none');
+    }
+
+}
+
 function onFirstLoad() {
     if (localStorage.length < 1) {
         localStorage.setItem('class', 'bard');
         localStorage.setItem('spell', 'animal-friendship');
+        localStorage.setItem('hideInstructions', 'no');
     }
 }
