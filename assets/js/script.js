@@ -202,6 +202,11 @@ function getSpellData(spellIndex) {
             } else {
                 spellDataBlock += `<li><span class="font-weight-bold">Ritual:</span> No</li>`;
             }
+            if (data.concentration) {
+                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> Yes</li>`;
+            } else {
+                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> No</li>`;
+            }
             spellDataBlock += `
             <li>
                 <span class="font-weight-bold">Components:</span>`;
@@ -223,13 +228,16 @@ function getSpellData(spellIndex) {
             <div class="col-12 col-md-6">
                             <ul class="spell-trait-list list-unstyled">                                
                                 <li><span class="font-weight-bold">Casting Time:</span> ${data.casting_time}</li>
-                                <li><span class="font-weight-bold">Range:</span> ${data.range}</li>
-                                <li><span class="font-weight-bold">Duration:</span> ${data.duration}</li>`;
-            if (data.concentration) {
-                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> Yes</li>`;
-            } else {
-                spellDataBlock += `<li><span class="font-weight-bold">Concentration:</span> No</li>`;
+                                <li><span class="font-weight-bold">Range:</span> ${data.range}</li>`;
+            if (data.area_of_effect) {
+                spellDataBlock += `
+                <li><span class="font-weight-bold">Area of Effect:</span> ${data.area_of_effect.size}ft ${data.area_of_effect.type}</li>`;
             }
+            if (data.dc) {
+                spellDataBlock += `
+                <li><span class="font-weight-bold">Save:</span> ${data.dc.dc_type.name}</li>`;
+            }
+            spellDataBlock += `<li><span class="font-weight-bold">Duration:</span> ${data.duration}</li>`;
             // If spell does damage
             if (data.damage) {
                 spellDataBlock += `
