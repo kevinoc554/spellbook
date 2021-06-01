@@ -195,7 +195,8 @@ function getSpellData(spellIndex) {
                 <div class="col-12 col-md-6">
                             <ul class="spell-trait-list list-unstyled">
                                 <li><span class="font-weight-bold">Level:</span> ${data.level}</li>
-                                <li><span class="font-weight-bold">Casting Time:</span> ${data.casting_time}</li>`;
+                                <li><span class="font-weight-bold">School:</span> ${data.school.name}</li>
+                                `;
             if (data.ritual) {
                 spellDataBlock += `<li><span class="font-weight-bold">Ritual:</span> Yes</li>`;
             } else {
@@ -220,7 +221,8 @@ function getSpellData(spellIndex) {
                     </ul>
                 </div>
             <div class="col-12 col-md-6">
-                            <ul class="spell-trait-list list-unstyled">
+                            <ul class="spell-trait-list list-unstyled">                                
+                                <li><span class="font-weight-bold">Casting Time:</span> ${data.casting_time}</li>
                                 <li><span class="font-weight-bold">Range:</span> ${data.range}</li>
                                 <li><span class="font-weight-bold">Duration:</span> ${data.duration}</li>`;
             if (data.concentration) {
