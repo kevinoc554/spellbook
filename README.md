@@ -62,6 +62,9 @@ Site Owner Goal:
 - **Bug:** When using links to target specific elements by their ID, the element was being overlaid by the site's fixed navbar.
     - **Issue:** The links were causing the top of the target element to sit at the very top of the window, which meant the fixed navbar was obscuring them.
     - **Fix:** Applied a positive `padding-top` and a corresponding negative `margin-top` to the target elements. This fixed the bug, but caused issues on mobile screens as the new padding on the first element was blocking clicks on links. This was fixed by changing the `z-index` of the divs.
+- **Bug:** Was unable to apply a class to a table row on load, as part of the `document.ready` function.
+    - **Issue:** The element is created by fetching the information from the API and writing it to the DOM as a Bootstrap table, which is subsequently styled by DataTables. This extra work meant that the element did not exist at the time that the `.addClass()` was being called.
+    - **Fix:** Used a `setTimeout()` function to delay calling the `.addClass()` until after the element has loaded.
 ### Bugs to be fixed
 
 ## Deployment
