@@ -1,6 +1,7 @@
 //jshint esversion: 6
 
-// Fetch last viewed spell list and spell data and write to DOM on load
+// Fetch last viewed spell list and spell data, write to DOM on load
+// and highlight seleceted class and spell row
 // If first visit, display first class and spell alphabetically
 $(document).ready(function () {
     onFirstLoad();
@@ -12,6 +13,7 @@ $(document).ready(function () {
     getClassData(firstClass);
     getSpellData(firstSpell);
     toggleActiveClassIcon(firstClass);
+    setActiveRow(firstSpell);
 });
 
 // Offcanvas effect on navbar adapted from Bootstrap
@@ -343,10 +345,19 @@ function hideInstructionsOnLoad(instructions) {
 
 }
 
+// set localStorage values on first load
 function onFirstLoad() {
     if (localStorage.length < 1) {
         localStorage.setItem('class', 'bard');
         localStorage.setItem('spell', 'animal-friendship');
         localStorage.setItem('hideInstructions', 'no');
     }
+}
+
+// Set active spell row based on local storage
+// Timeout delays function by 500ms to allow DataTables to complete rendering the table
+function setActiveRow(spell) {
+    setTimeout(function () {
+        $('#' + spell).addClass('active-spell-row');
+    }, .5*1000);
 }
