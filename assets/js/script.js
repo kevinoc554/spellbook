@@ -123,7 +123,7 @@ function getClassData(type) {
             if (data.count === 0) {
                 let noSpells = `
                 <p class="text-center">We do not currently have any spell info for this Class.</p>
-                <p class="text-center">Please select another Class from the row above.</p>`
+                <p class="text-center">Please select another Class from the row above.</p>`;
                 $('#spellListText').html(noSpells);
             } else {
                 let spellList = data.results;
@@ -359,5 +359,5 @@ function onFirstLoad() {
 function setActiveRow(spell) {
     setTimeout(function () {
         $('#' + spell).addClass('active-spell-row');
-    }, .5*1000);
+    }, 0.5 * 1000);
 }
