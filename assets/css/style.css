@@ -235,6 +235,10 @@ li .components-span:not(:last-of-type):after {
     color: #fff;
 }
 
+.footer-about-list li {
+    margin-bottom: .5rem;
+}
+
 .footer-about-list li a {
     color: #fafafa;
 }
