@@ -6,7 +6,7 @@ SpellBook offers a quick, simple and interactive way for players to look up the 
 
 User Goals:
 - Find information on Spells for use in game.
-- Players may use this site while actually playing with other people, and as such need to be able to find the information in a timely, straightforward manner to minimize disruption to the game.
+- Players may use this site while playing with other people, and as such need to be able to find the information in a timely, straightforward manner to minimize disruption to the game.
 
 Site Owner Goal:
 - Provide a streamlined, interactive interface that users can navigate easily and quickly to find the information they need.
@@ -16,7 +16,7 @@ Site Owner Goal:
 1. As a user, I want to be able to view a list of Spells associated with each Class.
 2. As a user, I want to be able to search through the list to locate a particular Spell.
 3. As a user, I want to be able to view the game information and description for a particular Spell.
-4. As a user, I want to be able to contact the Site Owner to provide feedback or request further features
+4. As a user, I want to be able to contact the Site Owner to provide feedback or request further features.
 5. As the site owner, I want to be able to provide clear documentation on the licence under which the game information is provided, and attribution wherever copyrighted material is used.
 
 ### Wireframes
@@ -25,7 +25,7 @@ Site Owner Goal:
 - [about.html](wireframes/about.pdf)
 
 ## Features
-### Features to be implemented
+### Features To Be Implemented
 
 ## Technologies Used
 - HTML5 - the pages of this site were designed using HTML.
@@ -38,7 +38,7 @@ Site Owner Goal:
 - [Font Awesome](https://fontawesome.com/) - Font Awesome icons were used for the social media links in the footer.
 - [Google Fonts](https://fonts.google.com/) - Google Fonts were used throughout the project.
 - [Hover.CSS](https://ianlunn.github.io/Hover/) - Hover.CSS was used to add hover effects to social media links in the footer.
-- [Image Color Picker](https://imagecolorpicker.com/) - Image Color Picker was used to select the site's color pallette.
+- [Image Color Picker](https://imagecolorpicker.com/) - Image Color Picker was used to select the site's color palette.
 - [D&D 5e API](http://www.dnd5eapi.co/) - All game information was requested via this API.
 - [EmailJS](https://www.emailjs.com/) - The EmailJS API was used in order to send submitted data from contact.html to the site owner.
 - [Free Logo Design](https://www.freelogodesign.org/) - The site's brand logo was created using Free Logo Design.
@@ -55,7 +55,7 @@ Site Owner Goal:
 ### Fixed
 - **Bug:** The search input added by the DataTables plugin was displaying incorrectly on tablet-sized screens.
     - **Issue:** DataTables creates a Bootstrap `.row` containing two `.col` divs to position both the search input and the dropdown to determine number of results per page. These `.col` divs were displaying incorrectly, due to the classes that were applied by DataTables.
-    - **Fix:** Used javascript to target the `.col` on creation, remove the offending class and add the correct one.
+    - **Fix:** Use JavaScript to target the `.col` on creation, remove the offending class and add the correct one.
 - **Bug:** The return to top button was causing the viewport to jump to the top, rather than a smooth scroll.
     - **Issue:** Was using JQuery to target the `window` and set the `.scrollTop()` to `0` on click, causing the page to jump to the top.
     - **Fix:** Targeted the `html` element instead of the `window`, and used the `.animate()` method to set the `scrollTop` to `0` smoothly over the course of `1000ms`.
@@ -72,7 +72,7 @@ Site Owner Goal:
 - At the time of submission, there are no differences between the development version and deployed version of the site.
 
 ### The following steps were taken to deploy this site:
-- Logged in to Github, and navigated to the site's **[repository](https://github.com/kevinoc554/spellbook)**.
+- Logged in to Github and navigated to the site's **[repository](https://github.com/kevinoc554/spellbook)**.
 - Clicked on **Settings** in the toolbar near the top of the screen.
 - Clicked on **Pages** on the left side of the **Settings** page.
 - Under the **Source** heading, clicked on the **Branch** dropdown, and selected **Master**.
@@ -81,7 +81,7 @@ Site Owner Goal:
 - *More info on deploying to **GitHub Pages** can be found [here](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site).*
 
 ### To run and edit the code for this site locally, follow these steps:
-* Log in to GitHub, and navigate to the site's **[repository](https://github.com/kevinoc554/spellbook)**.
+* Log in to GitHub and navigate to the site's **[repository](https://github.com/kevinoc554/spellbook)**.
 * Click on the green **Code** button.
 * Copy the URL under **Clone with HTTPS** by clicking on the **Copy** button.
 * Open the terminal in your IDE, and navigate to the desired directory.
