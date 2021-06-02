@@ -131,20 +131,20 @@ h3 {
 /* DataTables - Pagination */
 
 .page-link {
-    color: #c75d25;
-    background-color: #fafafa;
+    color: #BE5923;
+    background-color: #fff;
 }
 
 .page-link:hover {
     color: #fafafa;
-    background-color: #c75d2580;
+    background-color: #BE592380;
 }
 
 .page-item.active .page-link {
     z-index: 3;
-    color: #fafafa;
-    background-color: #c75d25;
-    border-color: #c75d25;
+    color: #fff;
+    background-color: #BE5923;
+    border-color: #BE5923;
 }
 
 li.paginate_button {
@@ -231,8 +231,8 @@ li .components-span:not(:last-of-type):after {
 .hvr-fade:active,
 .hvr-fade:focus,
 .hvr-fade:hover {
-    background-color: #c75d25;
-    color: #fafafa;
+    background-color: #BE5923;
+    color: #fff;
 }
 
 .footer-about-list li a {
@@ -354,8 +354,8 @@ li .components-span:not(:last-of-type):after {
 }
 
 .btn-sending {
-    background-color: #c75d25;
-    border-color: #c75d25;
+    background-color: #BE5923;
+    border-color: #BE5923;
 }
 
 .btn-sent {
