@@ -248,7 +248,13 @@ li .components-span:not(:last-of-type):after {
 }
 
 .disclaimer-text {
-    font-size: .5rem;
+    font-size: .75rem;
+}
+
+.disclaimer-text a {
+    font-weight: bold;
+    color: #fafafa;
+
 }
 
 /* ---About Page--- */
