@@ -303,6 +303,11 @@ li .components-span:not(:last-of-type):after {
 
 .about-toc figcaption {
     font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.about-toc ol li {
+    margin-bottom: .5rem;
 }
 
 .about-toc ol li a {
