@@ -308,6 +308,14 @@ function getSpellData(spellIndex) {
         spellDataBlock += `</div>`;
         $('#spellData').html(spellDataBlock);
     })
+    .fail(function () {
+        let spellApiFail = `
+                <h1 class="text-center">Hmmm...</h1>
+                <p class="text-center">We were unable to find the data for that spell.</p>
+                <p class="text-center">Please check your internet connection, refresh your page and try again. 
+                If the issue persists, please let us know about it over on our <a href="contact.html">Contact</a> page.</p>`;
+            $('#spellData').html(spellApiFail);
+    })
 }
 
 // Click spell name to request spell data from API
