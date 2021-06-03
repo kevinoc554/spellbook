@@ -180,6 +180,8 @@ function getSpellListTitle(type) {
 
 // Spell Data - fetch and write data to DOM
 function getSpellData(spellIndex) {
+    let throbber = `<img src="assets/images/loading.gif" alt="loading..." height="48" width="48" class="throbber">`;
+    $('#spellData').html(throbber);
     let spellUrl = baseUrl + 'spells/' + spellIndex;
     $.getJSON(spellUrl, function (data) {
         // Log selected spell in local storage for next visit 
