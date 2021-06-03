@@ -172,6 +172,7 @@ li.paginate_button:nth-last-of-type(3) {
 /* ---Spell Data--- */
 #spellData {
     padding-top: 1rem;
+    min-height: 15rem;
 }
 
 .spell-hr,
@@ -204,6 +205,13 @@ li .components-span:not(:last-of-type):after {
 #materialsText,
 #damagesText {
     display: none;
+}
+
+.throbber {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* ---Footer--- */
