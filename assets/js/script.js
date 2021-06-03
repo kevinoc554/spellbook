@@ -114,45 +114,42 @@ const baseUrl = 'https://www.dnd5eapi.co/api/';
 // Class Spell List - fetch and write data to DOM
 function getClassData(type) {
     let classUrl = baseUrl + 'classes/' + type + '/spells';
-    $.when(
-        $.getJSON(classUrl)
-    ).then(
-        function (data) {
-            // Log the selected class in local storage for future visits
-            localStorage.setItem('class', type);
-            if (data.count === 0) {
-                let noSpells = `
-                <p class="text-center">We do not currently have any spell info for this Class.</p>
-                <p class="text-center">Please select another Class from the row above.</p>`;
-                $('#spellListText').html(noSpells);
-            } else {
-                let spellList = data.results;
-                let spellDiv = `
-            <table class="table table-hover" id="spellListTable">
-                <thead class="thead-light">
-                    <tr>
-                        <th scope="col">Spell Name</th>
-                    </tr>
-                </thead>
-                <tbody>`;
-                $(spellList).each(function (i) {
-                    spellDiv += `
+    $.getJSON(classUrl, function (data) {
+        // Log the selected class in local storage for future visits
+        localStorage.setItem('class', type);
+        if (data.count === 0) {
+            let noSpells = `
+            <p class="text-center">We do not currently have any spell info for this Class.</p>
+            <p class="text-center">Please select another Class from the row above.</p>`;
+            $('#spellListText').html(noSpells);
+        } else {
+            let spellList = data.results;
+            let spellDiv = `
+        <table class="table table-hover" id="spellListTable">
+            <thead class="thead-light">
                 <tr>
-                    <th scope="row" id="${this.index}" data-scroll="#spellData">${this.name}</th>
-                </tr>`;
-                });
+                    <th scope="col">Spell Name</th>
+                </tr>
+            </thead>
+            <tbody>`;
+            $(spellList).each(function (i) {
                 spellDiv += `
-                </tbody>
-            </table>`;
-                $('#spellListText').html(spellDiv);
-                $('#spellListTable').DataTable({
-                    "info": false
-                });
-                // Fix issue with labels above table displaying incorrectly
-                $('#spellListTable_length').parent().removeClass('col-md-6');
-                $('#spellListTable_length').parent().addClass('col-lg-6');
-            }
-        });
+            <tr>
+                <th scope="row" id="${this.index}" data-scroll="#spellData">${this.name}</th>
+            </tr>`;
+            });
+            spellDiv += `
+            </tbody>
+        </table>`;
+            $('#spellListText').html(spellDiv);
+            $('#spellListTable').DataTable({
+                "info": false
+            });
+            // Fix issue with labels above table displaying incorrectly
+            $('#spellListTable_length').parent().removeClass('col-md-6');
+            $('#spellListTable_length').parent().addClass('col-lg-6');
+        }
+    })
 }
 
 // Click class icon to create class spell list table
