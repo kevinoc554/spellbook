@@ -153,7 +153,7 @@ h3 {
     z-index: 3;
     color: #fff;
     background-color: #BE5923;
-    border-color: #BE5923;
+    border-color: #291c1b;
 }
 
 li.paginate_button {
@@ -392,17 +392,17 @@ li .components-span:not(:last-of-type):after {
 
 .btn-sending {
     background-color: #BE5923;
-    border-color: #BE5923;
+    border-color: #291c1b;
 }
 
 .btn-sent {
     background-color: #4bb543;
-    border-color: #4bb543;
+    border-color: #291c1b;
 }
 
 .btn-send-failed {
     background-color: #dc3545;
-    border-color: #dc3545;
+    border-color: #291c1b;
 }
 
 /* Use Hover.CSS to override Bootstrap's default hover effects for the buttons created by JS */
