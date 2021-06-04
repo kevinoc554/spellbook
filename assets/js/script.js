@@ -61,10 +61,18 @@ $(window).scroll(function () {
 
 // Smooth scroll to top when btn is clicked
 $('#toTopBtn').click(function () {
-    $('html').animate({
+    $('html, body').stop().animate({
         scrollTop: 0
     }, 1000);
 });
+
+// Stop Scroll on user interaction
+// Adapted from StackOverflow
+$('html, body').bind('scroll mousedown DOMMouseScroll mousewheel keyup touchstart', function(e) {
+    if (e.which > 0 || e.type === 'mousedown' || e.type === 'mousewheel' || e.type === 'touchstart') {
+        $('html, body').stop();
+    }
+  });
 
 // EmailJS - emailjs is defined externally
 $('#formTrigger').submit(function (event) {
