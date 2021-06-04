@@ -68,7 +68,7 @@ $('#toTopBtn').click(function () {
 
 // Stop Scroll on user interaction
 // Adapted from StackOverflow
-$('html, body').bind('scroll mousedown DOMMouseScroll mousewheel keyup touchstart', function(e) {
+$('html, body').on('scroll mousedown DOMMouseScroll mousewheel keyup touchstart', function(e) {
     if (e.which > 0 || e.type === 'mousedown' || e.type === 'mousewheel' || e.type === 'touchstart') {
         $('html, body').stop();
     }
