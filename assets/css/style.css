@@ -1,14 +1,24 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* ---Hover.CSS base styles--- */
 .hvr-fade {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     overflow: hidden;
     -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
     transition-duration: .3s;
     -webkit-transition-property: color, background-color;
+    -o-transition-property: color, background-color;
     transition-property: color, background-color
 }
 
@@ -89,9 +99,14 @@ h3 {
 
 .class-icons-row .list-inline {
     margin-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
 }
 
@@ -180,6 +195,8 @@ li.paginate_button:nth-last-of-type(3) {
     background-color: unset;
     border: none;
     min-height: 1px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, .75)), to(rgba(0, 0, 0, 0)));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
 }
 
@@ -211,6 +228,8 @@ li .components-span:not(:last-of-type):after {
     position: relative;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -223,6 +242,8 @@ li .components-span:not(:last-of-type):after {
     background-color: unset;
     border: none;
     min-height: 1px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(250, 250, 250, 0)), color-stop(rgba(250, 250, 250, .75)), to(rgba(250, 250, 250, 0)));
+    background-image: -o-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, .75), rgba(250, 250, 250, 0));
     background-image: linear-gradient(to right, rgba(250, 250, 250, 0), rgba(250, 250, 250, .75), rgba(250, 250, 250, 0))
 }
 
@@ -548,6 +569,8 @@ li .components-span:not(:last-of-type):after {
         visibility: hidden;
         background-color: #343a40;
         transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        -webkit-transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        -o-transition: transform .3s ease-in-out, visibility .3s ease-in-out;
         transition: transform .3s ease-in-out, visibility .3s ease-in-out;
         transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
     }
@@ -555,6 +578,7 @@ li .components-span:not(:last-of-type):after {
     .offcanvas-collapse.open {
         visibility: visible;
         -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
         transform: translateX(-100%);
     }
 }
