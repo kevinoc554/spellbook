@@ -21,26 +21,11 @@ $('.navbar-toggler').click(function () {
     $('#navbarNav').toggleClass('open');
 });
 
-// Manual toggle to show/hide Instructions text
-// Toggles classes to change FA chevron
-$('#instructionsToggle').click(function () {
+// Toggle Font Awesome chevrons and show/hide following paragraphs
+$('.container-fluid').on('click', '.chevron-toggle', function () {
     $(this).toggleClass('fa-chevron-down');
     $(this).toggleClass('fa-chevron-up');
-    $('#instructionsText').slideToggle();
-});
-
-// Manual toggle to show/hide Materials text
-$('#spellData').on('click', '#materialsListToggle', function () {
-    $(this).toggleClass('fa-chevron-down');
-    $(this).toggleClass('fa-chevron-up');
-    $('#materialsText').slideToggle('fast');
-});
-
-// Manual toggle to show/hide Damages at higher levels text
-$('#spellData').on('click', '#damageListToggle', function () {
-    $(this).toggleClass('fa-chevron-down');
-    $(this).toggleClass('fa-chevron-up');
-    $('#damagesText').slideToggle();
+    $(this).parent().next().slideToggle('fast');
 });
 
 // Set background image of class icon divs by pulling text from spans
@@ -229,9 +214,9 @@ function getSpellData(spellIndex) {
             });
             if (data.material) {
                 spellDataBlock += `<p class="font-weight-bold">
-                Materials: <i id="materialsListToggle" class="fas fa-chevron-up pointer"></i>
+                Materials: <i class="chevron-toggle fas fa-chevron-up pointer"></i>
             </p>
-            <p id="materialsText" class="font-italic">${data.material}</p>
+            <p class="font-italic materials-text">${data.material}</p>
         `;
             }
             spellDataBlock += `
@@ -260,9 +245,9 @@ function getSpellData(spellIndex) {
                 if (data.damage.damage_at_character_level) {
                     spellDataBlock += `
                     <p class="font-weight-bold">Damage per character level: 
-                        <i id="damageListToggle" class="fas fa-chevron-up pointer"></i>
+                        <i class="fas fa-chevron-up pointer chevron-toggle"></i>
                     </p>
-                    <ol id="damagesText">
+                    <ol class="damages-text">
                         <li value="1">${data.damage.damage_at_character_level['1']}</li>
                         <li value="5">${data.damage.damage_at_character_level['5']}</li>
                         <li value="11">${data.damage.damage_at_character_level['11']}</li>
@@ -271,9 +256,9 @@ function getSpellData(spellIndex) {
                     // If regular levelled spell
                     spellDataBlock += `
                 <p class="font-weight-bold">Damage per spell level: 
-                    <i id="damageListToggle" class="fas fa-chevron-up pointer"></i>
+                    <i class="chevron-toggle fas fa-chevron-up pointer"></i>
                 </p>
-                <ol id="damagesText" start="${data.level}">`;
+                <ol class="damages-text" start="${data.level}">`;
                     let spellDamageObj = data.damage.damage_at_slot_level;
                     let spellDamageList = Object.values(spellDamageObj);
                     $(spellDamageList).each(function () {
@@ -323,7 +308,7 @@ function getSpellData(spellIndex) {
                 <p class="text-center">Please check your internet connection, refresh your page and try again. 
                 If the issue persists, please let us know about it over on our <a href="contact.html">Contact</a> page.</p>`;
             $('#spellData').html(spellApiFail);
-        })
+        });
 }
 
 // Click spell name to request spell data from API
