@@ -93,6 +93,7 @@ Site Owner Goal:
 ## Credits
 ### Code
 - The site's responsive offcanvas navbar was adapted from a Bootstrap example [here](https://getbootstrap.com/docs/4.6/examples/offcanvas/).
+- Code to allow users to interupt scroll animation adapted from StackOverflow question [here](https://stackoverflow.com/questions/2834667/how-can-i-differentiate-a-manual-scroll-via-mousewheel-scrollbar-from-a-javasc).
 ### Content
 ### Media
 - Hero images and Class Icons on the site are taken from the official Dungeons & Dragons Fan Site Kit, and used in line with Wizard's [Fan Site Kit Policy](https://dnd.wizards.com/articles/features/fan-site-kit).
