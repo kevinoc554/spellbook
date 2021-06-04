@@ -46,7 +46,14 @@ Site Owner Goal:
 - [Squoosh](https://squoosh.app/) - All images used on the site were compressed and resized using Squoosh.
 
 ## Testing
-### Validation
+### Validation:
+#### HTML
+- The HTML for the site's four pages was passed through the W3C Markup Validation Service, and no errors or warnings were found.
+#### CSS
+- The site's CSS was passed through the W3C CSS Validation Service, and no errors were found.
+- The validation tool highlighted some vendor prefixes which were added by [Autoprefixer](http://autoprefixer.github.io/) to ensure cross-browser support.
+#### JS
+- The site's JavaScript was validated using JSHint. 
 ### Automated Testing
 ### Testing of User Stories
 ### Manual Testing
