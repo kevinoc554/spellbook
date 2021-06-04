@@ -424,7 +424,8 @@ li .components-span:not(:last-of-type):after {
 .error-main {
     background-color: #b4a0ab80;
     text-align: center;
-    min-height: 78vh
+    min-height: 78vh;
+    padding-bottom: 3rem;
 }
 
 .error-header {
