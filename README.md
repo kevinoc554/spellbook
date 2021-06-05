@@ -11,7 +11,7 @@ User Goals:
 Site Owner Goal:
 - Provide a streamlined, interactive interface that users can navigate easily and quickly to find the information they need.
 
-## UX
+# UX
 ### User Stories
 1. As a user, I want to be able to view a list of Spells associated with each Class.
 2. As a user, I want to be able to search through the list to locate a particular Spell.
@@ -24,10 +24,50 @@ Site Owner Goal:
 - [contact.html](wireframes/contact.pdf)
 - [about.html](wireframes/about.pdf)
 
-## Features
+# Features
+## Exisiting Features
+## Across the site
+- Navigaton Bar
+    - A navigation bar is present on all three pages of the site, fixed to the top to ensure the user can always access it.
+    - The bar consists of a brand icon (which links back to the homepage), and three navigation links (one to each of the site's pages).
+    - The navigation link for the current page displays as highlighted, to provide visual feedback to the user.
+    - On mobile devices, the navigation bar is toggled into view with the hamburger icon in the top right corner. Tapping this icon will cause the navigation bar to slide in from off screen in a smooth animation.
+- Hero Image
+    - A hero image displays on each of the site's pages, at the top of the content and under the navigation bar.
+    - The image chosen for this jumbotron is the cover artwork of the official Dungeons & Dragons Player Handbook, used here as part of the Fan Site Kit. 
+    - This provides a visual consistency; not only across the pages of the site but also with the official D&D products, with which the users will already be familiar.
+- Footer
+    - The footer, which is present on all pages of the site, provides links to the site owner's social media pages, along with a link to the project's GitHub repository. All these links open in a new browser tab, allowing the user to navigate back to this site with ease.
+    - Also in the footer, the user will find links to the site's About page, which they can follow to find out more about how the project works. The different links will direct the user to the different headings on the About page, allowing the user to navigate directly to the topic that interests them.
+    - Lastly, the footer also contains some legal disclaimer text, which states that Wizards of the Coast, Dungeons & Dragons, and their logos are trademarks of Wizards of the Coast LLC, and provides links to both the Fan Site Kit and to Wizard's own site.
+## Homepage Features
+- Instructions
+    - The first time a user visit's the site, a set of instructions will appear under the hero image.
+    - This text outlines how to use the site, providing enough information to get the user started with the site's functionality.
+    - Once a user interacts with the site by choosing a Class and then a Spell, the browser will "remember" this, and the instructions text will be hidden on future visits.
+    - However, should the user need more information, the instructions text can be toggled between hidden and displayed at any time by clicking the chevron next to the Instructions heading.
+- Class Row
+    - Under the instructions, the user is shown a selection of Dungeons & Dragons classes to choose from.
+    - On mobile screens, these are displayed as tappable oval icons containing the Class names.
+    - On larger screens, these Class names are accompanied by their associated icons from the Fan Site Kit, which are both visually striking and help convey more information about the Classes.
+    - Regardless of screen size, the background of the Class icons changes when they are clicked in order to indicate which Class is currently chosen.
+- Class Spell List
+    - When a class is chosen from the section above, a request is sent to the DnD API, and a list of the spells associated with that class is created and displayed as a table here.
+    - This list displays alphabetically (A-Z), and the order can be inverted by clicking on the table heading.
+    - The user can filter the list at any time by typing into the search input.
+    - If there are more than 10 results, some pagination buttons will appear at the bottom of the table to allow users to navigate the results.
+    - The user can also choose how many results to display per page using a drop down at the top.
+    - When a Spell's row in the table is clicked, its background colour will change to indicate that it is the active Spell.
+    - On the site's first load, the first Class alphabetically (Bard) is selected. On subsequent visits, the site will read information written to local storage to "remember" which class was displayed last and will show that list instead.
+- Spell Data
+    - When a Spell is selected from the table above, a request is sent to the DnD API again, this time requesting the details of that spell. The return data is then written to the DOM as the Spell Data section.
+    - This section will always display the information common to all Spells in D&D; the spell's name, level, school, range, casting time and description will always be shown.
+    - Non-essential information (e.g. spell materials, damage at higher levels), is initially hidden from the user's view to prevent cluttering the page, but can be displayed by clicking on the chevron next to the relevant item.
+    - Regarding the features that are not common to all Spells, the site's JavaScript is designed (using a series of "if" statements) to only display the categories that are relevant to the chosen spell, e.g. the Damage Per Spell Level will not appear for a spell that does not cause damage. Thsi aims to prevent showing the user irrelevant categories or items that are `undefined`, which would be a poor user experience.
+    - On the site's first load, the first Spell in the Bard Class (Animal Friendship) is selected. On subsequent visits, the site will read information written to local storage to "remember" which spell was displayed last and will show that information instead.
 ### Features To Be Implemented
 
-## Technologies Used
+# Technologies Used
 - HTML5 - the pages of this site were designed using HTML.
 - CSS3 - the pages of this site were styled using CSS.
 - JavaScript - the interactive elements of this site were implemented using JavaScript.
@@ -45,20 +85,20 @@ Site Owner Goal:
 - [Favicon Generator](https://www.favicongenerator.com/) - Favicon Generator was used to create and size the favicon for the site, using the logo created above.
 - [Squoosh](https://squoosh.app/) - All images used on the site were compressed and resized using Squoosh.
 
-## Testing
-### Validation:
-#### HTML
+# Testing
+## Validation:
+### HTML
 - The HTML for the site's four pages was passed through the W3C Markup Validation Service, and no errors or warnings were found.
-#### CSS
+### CSS
 - The site's CSS was passed through the W3C CSS Validation Service, and no errors were found.
 - The validation tool highlighted some vendor prefixes which were added by [Autoprefixer](http://autoprefixer.github.io/) to ensure cross-browser support.
-#### JS
+### JS
 - The site's JavaScript was validated using JSHint. 
 ### Automated Testing
 ### Testing of User Stories
 ### Manual Testing
 
-## Bugs
+# Bugs
 ### Fixed
 - **Bug:** The search input added by the DataTables plugin was displaying incorrectly on tablet-sized screens.
     - **Issue:** DataTables creates a Bootstrap `.row` containing two `.col` divs to position both the search input and the dropdown to determine number of results per page. These `.col` divs were displaying incorrectly, due to the classes that were applied by DataTables.
@@ -74,7 +114,7 @@ Site Owner Goal:
     - **Fix:** Used a `setTimeout()` function to delay calling the `.addClass()` until after the element has loaded.
 ### Bugs to be fixed
 
-## Deployment
+# Deployment
 - This site was developed in [Gitpod](https://www.gitpod.io/), committed and pushed to [Github](https://github.com/), and deployed on [GitHub Pages](https://pages.github.com/).
 - At the time of submission, there are no differences between the development version and deployed version of the site.
 
@@ -97,7 +137,7 @@ Site Owner Goal:
 * Press enter to clone the repository.
 * *More info on cloning a **GitHub** repository can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).*
 
-## Credits
+# Credits
 ### Code
 - The site's responsive offcanvas navbar was adapted from a Bootstrap example [here](https://getbootstrap.com/docs/4.6/examples/offcanvas/).
 - Code to allow users to interupt scroll animation adapted from StackOverflow question [here](https://stackoverflow.com/questions/2834667/how-can-i-differentiate-a-manual-scroll-via-mousewheel-scrollbar-from-a-javasc).
