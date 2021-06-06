@@ -25,7 +25,6 @@ Site Owner Goal:
 - [about.html](wireframes/about.pdf)
 
 # Features
-## Exisiting Features
 ## Across the site
 - Navigaton Bar
     - A navigation bar is present on all three pages of the site, fixed to the top to ensure the user can always access it.
@@ -78,6 +77,19 @@ Site Owner Goal:
 - Table of Contents
     - The About page's Table of Contents consists of a list of clickable links that bring the user directly to the different headings on the About page.
     - In combination with the Return to Top button, the table of contents allows users to quickly and easily navigate the About page to find whatever information they need.
+## Contact Page
+- Contact Form
+    - The site's contact form consists of three input fields; one each for the user's name, email address and message.
+    - Each field is required, and the form will not submit if any are left empty. The user will instead be shown a prompt to complete any empty fields.
+    - The email field will also check that the text provided is in the form of an email address, and will prompt the user instead of submitting if it is not.
+    - On a successful submit, the form will send an email to the site's owner (using EmailJS) containing the information in the fields.
+- Submit Button
+    - Along with the prompts described above, the site's submit button will also provide feedback to the user.
+    - The submit button has four visually distinct variations that can display throughout the process:
+        - Send: The default submit button visible on load.
+        - Sending: Once the Send button is clicked (provided the form data provided is validated, as described above) the button will change to Sending. This button is orange in colour and displays a throbber/loading gif to communicate to the user that their action is being processed.
+        - Sent: Once the request to the EmailJS API is successfully completed, and an email has been sent, the button will change to Sent. This button displays as green, and shows a tick icon to indicate the action has been successful.
+        - Sending Failed: If the request is unable to process for any reason, the button will change to Sending Failed, and an error will log to the console. This button is red in colour, and shows an X icon to indicate that the action has failed. Additionally, if the Sending Failed button is displayed, the form content will not be deleted, which means the user's inputted text has not been lost.
 ## Features To Be Implemented
 
 # Technologies Used
