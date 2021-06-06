@@ -36,10 +36,14 @@ Site Owner Goal:
     - A hero image displays on each of the site's pages, at the top of the content and under the navigation bar.
     - The image chosen for this jumbotron is the cover artwork of the official Dungeons & Dragons Player Handbook, used here as part of the Fan Site Kit. 
     - This provides a visual consistency; not only across the pages of the site but also with the official D&D products, with which the users will already be familiar.
+- Return to Top Button
+    - A return to top button is present on each page on the site, which allows the user to navigate back to the top of the content with ease from any point on the page.
+    - The button is initially hidden, and fades into view when the user begins to scroll down the page.
+    - Clicking on the button will cause the viewport to smoothly scroll back to the top.
 - Footer
     - The footer, which is present on all pages of the site, provides links to the site owner's social media pages, along with a link to the project's GitHub repository. All these links open in a new browser tab, allowing the user to navigate back to this site with ease.
     - Also in the footer, the user will find links to the site's About page, which they can follow to find out more about how the project works. The different links will direct the user to the different headings on the About page, allowing the user to navigate directly to the topic that interests them.
-    - Lastly, the footer also contains some legal disclaimer text, which states that Wizards of the Coast, Dungeons & Dragons, and their logos are trademarks of Wizards of the Coast LLC, and provides links to both the Fan Site Kit and to Wizard's own site.
+    - Lastly, the footer also contains some legal disclaimer text, which states that Wizards of the Coast, Dungeons & Dragons, and their logos are trademarks of Wizards of the Coast LLC and provides links to both the Fan Site Kit and to Wizard's own site.
 ## Homepage Features
 - Instructions
     - The first time a user visit's the site, a set of instructions will appear under the hero image.
@@ -63,9 +67,18 @@ Site Owner Goal:
     - When a Spell is selected from the table above, a request is sent to the DnD API again, this time requesting the details of that spell. The return data is then written to the DOM as the Spell Data section.
     - This section will always display the information common to all Spells in D&D; the spell's name, level, school, range, casting time and description will always be shown.
     - Non-essential information (e.g. spell materials, damage at higher levels), is initially hidden from the user's view to prevent cluttering the page, but can be displayed by clicking on the chevron next to the relevant item.
-    - Regarding the features that are not common to all Spells, the site's JavaScript is designed (using a series of "if" statements) to only display the categories that are relevant to the chosen spell, e.g. the Damage Per Spell Level will not appear for a spell that does not cause damage. Thsi aims to prevent showing the user irrelevant categories or items that are `undefined`, which would be a poor user experience.
+    - Regarding the features that are not common to all Spells, the site's JavaScript is designed (using a series of "if" statements) to only display the categories that are relevant to the chosen spell, e.g. the Damage Per Spell Level will not appear for a spell that does not cause damage. This aims to prevent showing the user irrelevant categories or items that are `undefined`, which would be a poor user experience.
     - On the site's first load, the first Spell in the Bard Class (Animal Friendship) is selected. On subsequent visits, the site will read information written to local storage to "remember" which spell was displayed last and will show that information instead.
-### Features To Be Implemented
+## About Page Features
+- About Text
+    - The text of the About page is divided into three sections:
+        - "What do we do?": This section provides a quick description of the site's purpose and functionality, along with a link to the project's GitHub repository.
+        - "How does it work?": This section provides some information about the API used to power the site, along with the Open Gaming Licence under which the information is provided.
+        - "Legal Disclaimer": This section contains the full text of the Open Gaming Licence.
+- Table of Contents
+    - The About page's Table of Contents consists of a list of clickable links that bring the user directly to the different headings on the About page.
+    - In combination with the Return to Top button, the table of contents allows users to quickly and easily navigate the About page to find whatever information they need.
+## Features To Be Implemented
 
 # Technologies Used
 - HTML5 - the pages of this site were designed using HTML.
