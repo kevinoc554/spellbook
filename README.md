@@ -28,7 +28,7 @@ Site Owner Goal:
 - [about.html](wireframes/about.pdf)
 
 # Features
-## Across the site
+## General
 - Navigaton Bar
     - A navigation bar is present on all three pages of the site, fixed to the top to ensure the user can always access it.
     - The bar consists of a brand icon (which links back to the homepage), and three navigation links (one to each of the site's pages).
@@ -178,6 +178,7 @@ Site Owner Goal:
     - Colours across the site were updated (with the help of [WebAim](https://webaim.org/resources/contrastchecker/) Contrast Checker) to ensure there was sufficient contrast between foreground and background colours.
     - The size and spacing of the tap targets in both the Footer and the Table of Contents were increased having been flagged as being too small/close together.
     - The font size of the legal disclaimer in the footer was increased to ensure all text on the site was of a sufficient size.
+    - Ensured that all buttons had accessible names.
 ## Testing of User Stories
 1. As a user, I want to be able to view a list of Spells associated with each Class.
     - The Class Spell List is prominently displayed on all screen sizes.
@@ -197,7 +198,60 @@ Site Owner Goal:
     - A copyright disclaimer can be found at the bottom of every page on the site.
     - The "Legal Disclaimer" section of the About page provides the full text of the Open Gaming Licence, under which the official Dungeons and Dragons content is used.
 
-### Manual Testing
+## Manual Testing
+### General
+- Navigation Bar
+    - Tested that: 
+        - all links in the navigation bar were functioning correctly.
+        - the brand logo displays correctly and links to the homepage.
+        - the hamburger icon appears at correct screen sizes.
+        - the off-canvas animation functions correctly, and the list slides into view when the hamburger icon is clicked.
+- Hero Image
+    - Tested that:
+        - the hero image displays correctly on all screen sizes, i.e. the image is clearly visible and the text is legible.
+- Return to top button
+    - Tested that:
+        - the return to top button is present on all pages of the site.
+        - the button is hidden at first, and only fades into view when a user scrolls down.
+        - when clicked, the button causes a smooth scroll back to the top of the page
+        - the scroll can be interrupted by any user input (e.g., a keystroke, click, tap or mouse wheel scroll), so users can intuitively cancel out of accidentally triggered scrolls.
+- Footer
+    - Tested that:
+        - the About links all function correctly and bring the user to the relevant part of the about page.
+        - the Social Media links all function correctly and bring the user to the relevant site in a new tab.
+        - the copyright text  displays correctly and is legible, and that the links connect to the correct sites and open in new tabs.
+        - the hover effects on Social Media links trigger correctly.
+### Homepage
+- Instructions
+    - Tested that:
+        - the Instructions row displays correctly, and all text is legible.
+        - clicking the chevron next to the Instructions header causes the following text to slide up and down.
+- Class Icon Row
+    - Tested that:
+        - the Class icons display correctly at different screen sizes:
+            - as tappable icons on mobile screens.
+            - as larger icons accompanied by images on larger screens. 
+- Class Spell List
+    - Tested that:
+        - the Spell List was displaying correctly.
+        - the search input was working, and allowed users to filter the results.
+        - clicking the list heading row toggles whether the list is sorted A-Z or Z-A.
+        - the pagination features were present and functioning correctly:
+            - users can choose the number of results per page.
+            - users can navigate back and forth through the pages of results.
+            - the number of pagination buttons visible is reduced on smaller screens,but intuitive navigation is still possible.
+        - clicking on a Spell row:
+            - changes that row's backround colour to show it is selected. 
+            - sends an API request that returns the information for that spell.
+            - displays it in the Spell Data section.
+- API Failure
+- Local Storage
+### Contact
+- EmailJS
+- Send Button
+        
+        
+
 
 # Bugs
 ### Fixed
