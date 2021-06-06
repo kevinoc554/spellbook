@@ -139,8 +139,10 @@ Site Owner Goal:
         - Sent: Once the request to the EmailJS API is successfully completed, and an email has been sent, the button will change to Sent. This button displays as green, and shows a tick icon to indicate the action has been successful.
         - Sending Failed: If the request is unable to process for any reason, the button will change to Sending Failed, and an error will log to the console. This button is red in colour, and shows an X icon to indicate that the action has failed. Additionally, if the Sending Failed button is displayed, the form content will not be deleted, which means the user's inputted text has not been lost.
     ![Send Button](screenshots/send-button.PNG) *The four variations of the Send Button*
-    
+
 ## Features To Be Implemented
+- User Accounts 
+    - Users will be able to create their own personalised lists of spells for each of their D&D characters, and save them to their accounts for future use.
 
 # Technologies Used
 - HTML5 - the pages of this site were designed using HTML.
@@ -154,6 +156,7 @@ Site Owner Goal:
 - [Google Fonts](https://fonts.google.com/) - Google Fonts were used throughout the project.
 - [Hover.CSS](https://ianlunn.github.io/Hover/) - Hover.CSS was used to add hover effects to social media links in the footer.
 - [Image Color Picker](https://imagecolorpicker.com/) - Image Color Picker was used to select the site's color palette.
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Contrast Checker was used to ensure there was sufficient contrast between foreground and background colours.
 - [D&D 5e API](http://www.dnd5eapi.co/) - All game information was requested via this API.
 - [EmailJS](https://www.emailjs.com/) - The EmailJS API was used in order to send submitted data from contact.html to the site owner.
 - [Free Logo Design](https://www.freelogodesign.org/) - The site's brand logo was created using Free Logo Design.
@@ -169,7 +172,12 @@ Site Owner Goal:
 - The validation tool highlighted some vendor prefixes which were added by [Autoprefixer](http://autoprefixer.github.io/) to ensure cross-browser support.
 ### JS
 - The site's JavaScript was validated using JSHint. 
-### Automated Testing
+## Automated Testing
+- Each page of the site was evaluated using [Lighthouse](https://developers.google.com/web/tools/lighthouse/) to assess them on four metrics; Performance, Accessibility, Best Practices & Search Engine Optimization (SEO).
+- The following changes were implemented:
+    - Colours across the site were updated (with the help of [WebAim](https://webaim.org/resources/contrastchecker/) Contrast Checker) to ensure there was sufficient contrast between foreground and background colours.
+    - The size and spacing of the tap targets in both the Footer and the Table of Contents were increased having been flagged as being too small/close together.
+    - The font size of the legal disclaimer in the footer was increased to ensure all text on the site was of a sufficient size.
 ### Testing of User Stories
 ### Manual Testing
 
