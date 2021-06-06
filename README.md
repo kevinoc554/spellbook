@@ -178,7 +178,25 @@ Site Owner Goal:
     - Colours across the site were updated (with the help of [WebAim](https://webaim.org/resources/contrastchecker/) Contrast Checker) to ensure there was sufficient contrast between foreground and background colours.
     - The size and spacing of the tap targets in both the Footer and the Table of Contents were increased having been flagged as being too small/close together.
     - The font size of the legal disclaimer in the footer was increased to ensure all text on the site was of a sufficient size.
-### Testing of User Stories
+## Testing of User Stories
+1. As a user, I want to be able to view a list of Spells associated with each Class.
+    - The Class Spell List is prominently displayed on all screen sizes.
+    - The "active" class is clearly signposted to the user, both in the heading at the top of the Class Spell List and by changing the background colour of the selected Class Icon.
+    - Instructions are displayed to first time users and are visible at a click for returning users.
+2. As a user, I want to be able to search through the list to locate a particular Spell.
+    - The Class Spell List has a clearly labelled search input at the top, which will allow the user to filter through the results in the List.
+    - Instructions are displayed to first time users and are visible at a click for returning users.
+3. As a user, I want to be able to view the game information and description for a particular Spell.
+    - The Spell Data section provides all the relevant information for the selected spell and will not display unrelated information.
+    - The "active" spell is signposted to the user, both in the heading at the top of the Spell Data and by changing the background colour of the selected Spell Row.
+    - Instructions are displayed to first time users and are visible at a click for returning users.
+4. As a user, I want to be able to contact the Site Owner to provide feedback or request further features.
+    - The site's Contact page allows users to send an email directly to the site owners.
+    - The Contact page can be accessed from anywhere on the site via the navigation bar.
+5. As the site owner, I want to be able to provide clear documentation on the licence under which the game information is provided, and attribution wherever copyrighted material is used.
+    - A copyright disclaimer can be found at the bottom of every page on the site.
+    - The "Legal Disclaimer" section of the About page provides the full text of the Open Gaming Licence, under which the official Dungeons and Dragons content is used.
+
 ### Manual Testing
 
 # Bugs
