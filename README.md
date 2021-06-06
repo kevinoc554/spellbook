@@ -34,29 +34,53 @@ Site Owner Goal:
     - The bar consists of a brand icon (which links back to the homepage), and three navigation links (one to each of the site's pages).
     - The navigation link for the current page displays as highlighted, to provide visual feedback to the user.
     - On mobile devices, the navigation bar is toggled into view with the hamburger icon in the top right corner. Tapping this icon will cause the navigation bar to slide in from off screen in a smooth animation.
+    
+![Navigation Bar](screenshots/navbar.PNG)
+*A screenshot of the Navigation bar as viewed on larger screen sizes*
+
 - Hero Image
-    - A hero image displays on each of the site's pages, at the top of the content and under the navigation bar.
+    - A hero image displays on each of the site's pages, overlaid with the site's title.
     - The image chosen for this jumbotron is the cover artwork of the official Dungeons & Dragons Player Handbook, used here as part of the Fan Site Kit. 
     - This provides a visual consistency; not only across the pages of the site but also with the official D&D products, with which the users will already be familiar.
+
+![Hero Image](screenshots/hero-image.PNG)
+*A screenshot of the Hero Image*
+
 - Return to Top Button
     - A return to top button is present on each page on the site, which allows the user to navigate back to the top of the content with ease from any point on the page.
     - The button is initially hidden, and fades into view when the user begins to scroll down the page.
     - Clicking on the button will cause the viewport to smoothly scroll back to the top.
+
+![Return to top button](screenshots/return-to-top.PNG)
+*Return to top button*
+
 - Footer
     - The footer, which is present on all pages of the site, provides links to the site owner's social media pages, along with a link to the project's GitHub repository. All these links open in a new browser tab, allowing the user to navigate back to this site with ease.
     - Also in the footer, the user will find links to the site's About page, which they can follow to find out more about how the project works. The different links will direct the user to the different headings on the About page, allowing the user to navigate directly to the topic that interests them.
     - Lastly, the footer also contains some legal disclaimer text, which states that Wizards of the Coast, Dungeons & Dragons, and their logos are trademarks of Wizards of the Coast LLC and provides links to both the Fan Site Kit and to Wizard's own site.
+
+![Footer](screenshots/footer.PNG)
+*A screenshot of the footer as viewed on larger screen sizes*
+
 ## Homepage Features
 - Instructions
     - The first time a user visit's the site, a set of instructions will appear under the hero image.
     - This text outlines how to use the site, providing enough information to get the user started with the site's functionality.
     - Once a user interacts with the site by choosing a Class and then a Spell, the browser will "remember" this, and the instructions text will be hidden on future visits.
     - However, should the user need more information, the instructions text can be toggled between hidden and displayed at any time by clicking the chevron next to the Instructions heading.
+
+![Instructions](screenshots/instructions.PNG)
+*A screenshot of the Instructions section*
+
 - Class Row
     - Under the instructions, the user is shown a selection of Dungeons & Dragons classes to choose from.
     - On mobile screens, these are displayed as tappable oval icons containing the Class names.
     - On larger screens, these Class names are accompanied by their associated icons from the Fan Site Kit, which are both visually striking and help convey more information about the Classes.
     - Regardless of screen size, the background of the Class icons changes when they are clicked in order to indicate which Class is currently chosen.
+
+![Class Icons Row](screenshots/class-row.PNG)
+*A screenshot of the Class Icon Row as viewed on larger screen sizes. The Bard Class is selected.*
+
 - Class Spell List
     - When a class is chosen from the section above, a request is sent to the DnD API, and a list of the spells associated with that class is created and displayed as a table here.
     - This list displays alphabetically (A-Z), and the order can be inverted by clicking on the table heading.
@@ -65,34 +89,57 @@ Site Owner Goal:
     - The user can also choose how many results to display per page using a drop down at the top.
     - When a Spell's row in the table is clicked, its background colour will change to indicate that it is the active Spell.
     - On the site's first load, the first Class alphabetically (Bard) is selected. On subsequent visits, the site will read information written to local storage to "remember" which class was displayed last and will show that list instead.
+
+        ![Class Spell List](screenshots/class-spell-list.PNG)
+
+        *A screenshot of the Class Spell List as viewed on mobile screen sizes. The Bard Class and Animal Friendship Spell are selected.*
+
 - Spell Data
     - When a Spell is selected from the table above, a request is sent to the DnD API again, this time requesting the details of that spell. The return data is then written to the DOM as the Spell Data section.
     - This section will always display the information common to all Spells in D&D; the spell's name, level, school, range, casting time and description will always be shown.
     - Non-essential information (e.g. spell materials, damage at higher levels), is initially hidden from the user's view to prevent cluttering the page, but can be displayed by clicking on the chevron next to the relevant item.
     - Regarding the features that are not common to all Spells, the site's JavaScript is designed (using a series of "if" statements) to only display the categories that are relevant to the chosen spell, e.g. the Damage Per Spell Level will not appear for a spell that does not cause damage. This aims to prevent showing the user irrelevant categories or items that are `undefined`, which would be a poor user experience.
     - On the site's first load, the first Spell in the Bard Class (Animal Friendship) is selected. On subsequent visits, the site will read information written to local storage to "remember" which spell was displayed last and will show that information instead.
+
+        ![Spell Data](screenshots/spell-data.PNG)
+
+        *A screenshot of the Spell Data Section as viewed on mobile screen sizes. The Animal Friendship Spell is selected.*
+
 ## About Page Features
 - About Text
     - The text of the About page is divided into three sections:
         - "What do we do?": This section provides a quick description of the site's purpose and functionality, along with a link to the project's GitHub repository.
         - "How does it work?": This section provides some information about the API used to power the site, along with the Open Gaming Licence under which the information is provided.
         - "Legal Disclaimer": This section contains the full text of the Open Gaming Licence.
+
 - Table of Contents
     - The About page's Table of Contents consists of a list of clickable links that bring the user directly to the different headings on the About page.
     - In combination with the Return to Top button, the table of contents allows users to quickly and easily navigate the About page to find whatever information they need.
+
+        ![Table of Contents](screenshots/toc.PNG)
+
+        *Table of Contents*
+
 ## Contact Page
 - Contact Form
     - The site's contact form consists of three input fields; one each for the user's name, email address and message.
     - Each field is required, and the form will not submit if any are left empty. The user will instead be shown a prompt to complete any empty fields.
     - The email field will also check that the text provided is in the form of an email address, and will prompt the user instead of submitting if it is not.
     - On a successful submit, the form will send an email to the site's owner (using EmailJS) containing the information in the fields.
+
+        ![Table of Contents](screenshots/contact.PNG)
+
+        *Contact form, as viewed on mobile*
+
 - Submit Button
     - Along with the prompts described above, the site's submit button will also provide feedback to the user.
     - The submit button has four visually distinct variations that can display throughout the process:
-        - Send: The default submit button visible on load.
-        - Sending: Once the Send button is clicked (provided the form data provided is validated, as described above) the button will change to Sending. This button is orange in colour and displays a throbber/loading gif to communicate to the user that their action is being processed.
+        - Send Message: The default submit button visible on load.
+        - Sending: Once the Send Message button is clicked (provided the form data provided is validated, as described above) the button will change to Sending. This button is orange in colour and displays a throbber/loading gif to communicate to the user that their action is being processed.
         - Sent: Once the request to the EmailJS API is successfully completed, and an email has been sent, the button will change to Sent. This button displays as green, and shows a tick icon to indicate the action has been successful.
         - Sending Failed: If the request is unable to process for any reason, the button will change to Sending Failed, and an error will log to the console. This button is red in colour, and shows an X icon to indicate that the action has failed. Additionally, if the Sending Failed button is displayed, the form content will not be deleted, which means the user's inputted text has not been lost.
+    ![Send Button](screenshots/send-button.PNG) *The four variations of the Send Button*
+    
 ## Features To Be Implemented
 
 # Technologies Used
