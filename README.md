@@ -199,6 +199,24 @@ Site Owner Goal:
     - The "Legal Disclaimer" section of the About page provides the full text of the Open Gaming Licence, under which the official Dungeons and Dragons content is used.
 
 ## Manual Testing
+### Testing Environments
+Development and initial testing took place on a HP 250 G6 Laptop (Windows 10) in Chrome. Subsequent testing took place across the following devices, operating systems and browsers:
+
+- Devices:
+    - HP 250 G6 Laptop (Windows 10)
+    - MacBook Pro 2013 (MacOS)
+    - OnePlus 6T (Oxygen OS)
+    - Samsung Galaxy S9 (Android)
+    - Apple iPad (iPadOS 14)
+
+- Browsers:
+    - Chrome
+    - Firefox
+    - Edge
+    - Safari
+
+*All testing steps below were taken on all devices and browsers, unless otherwise stated.*
+
 ### General
 - Navigation Bar
     - Tested that: 
@@ -234,18 +252,26 @@ Site Owner Goal:
 - Class Spell List
     - Tested that:
         - the Spell List was displaying correctly.
-        - the search input was working, and allowed users to filter the results.
+        - the search input was working and allowed users to filter the results.
         - clicking the list heading row toggles whether the list is sorted A-Z or Z-A.
         - the pagination features were present and functioning correctly:
             - users can choose the number of results per page.
             - users can navigate back and forth through the pages of results.
-            - the number of pagination buttons visible is reduced on smaller screens,but intuitive navigation is still possible.
+            - the number of pagination buttons visible is reduced on smaller screens, but intuitive navigation is still possible.
         - clicking on a Spell row:
-            - changes that row's backround colour to show it is selected. 
+            - changes that row's background colour to show it is selected. 
             - sends an API request that returns the information for that spell.
             - displays it in the Spell Data section.
-- API Failure
+### JavaScript
+- API Error Handling
+    - As users are selecting from a defined set of options rather than providing a typed input, as long as the API itself is functioning, the request is unlikely to fail. That said, provisions have been built into the site's JS to ensure that in the event that the API request does fail, it is handled gracefully and results in a positive user experience.
+    - Instead of the requested information (Class Spell List or Spell Data) a piece of text will display informign the user that something went wrong, and asking them to  try again. The text will also ask the user to report any persistent issues to the site owners via the Contact form.
+    - In order to test this, the API was intentionally fed a bad URL to ensure it failed and the text appeared as intended
 - Local Storage
+    - The site uses the browsers local storage to "remember" the choice of Class Spell List and Spell Data the user has made on a previous visit, and show them on load.
+    - This was tested and found to be functioning on all browsers.
+    - If there are no previous selections found in local storage, it will to default to the first Class and Spell alphabetically, namely "Bard" and "Animal Friendship".
+    - This was tesetd across browsers using the `localStorage.clear();` command in the console and refreshing the page.
 ### Contact
 - EmailJS
 - Send Button
