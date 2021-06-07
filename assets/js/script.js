@@ -214,7 +214,7 @@ function getSpellData(spellIndex) {
             });
             if (data.material) {
                 spellDataBlock += `<p class="font-weight-bold">
-                Materials: <i class="chevron-toggle fas fa-chevron-up pointer"></i>
+                Materials: <i class="chevron-toggle fas fa-chevron-up pointer"><span class="sr-only">Show/hide materials text</span></i>
             </p>
             <p class="font-italic materials-text">${data.material}</p>
         `;
@@ -245,7 +245,7 @@ function getSpellData(spellIndex) {
                 if (data.damage.damage_at_character_level) {
                     spellDataBlock += `
                     <p class="font-weight-bold">Damage per character level: 
-                        <i class="fas fa-chevron-up pointer chevron-toggle"></i>
+                        <i class="fas fa-chevron-up pointer chevron-toggle"><span class="sr-only">Show/hide spell damage at different character levels</span></i>
                     </p>
                     <ol class="damages-text">
                         <li value="1">${data.damage.damage_at_character_level['1']}</li>
@@ -256,7 +256,7 @@ function getSpellData(spellIndex) {
                     // If regular levelled spell
                     spellDataBlock += `
                 <p class="font-weight-bold">Damage per spell level: 
-                    <i class="chevron-toggle fas fa-chevron-up pointer"></i>
+                    <i class="chevron-toggle fas fa-chevron-up pointer"><span class="sr-only">Show/hide damage at different spell levels</span></i>
                 </p>
                 <ol class="damages-text" start="${data.level}">`;
                     let spellDamageObj = data.damage.damage_at_slot_level;
