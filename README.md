@@ -32,7 +32,7 @@ Based on the above User Stories, the following wireframes were mocked up.
 ### Colour Scheme
 The site's initial colour palette was built around the chosen hero image, a version of which is the cover image of the bestselling Dungeons & Dragons book, the Player's Handbook. This image and colour scheme was employed in order to elicit a positive response from users, the majority of whom will be familiar with this artwork and book already. 
 
-While some of the colours used were tweaked throughout the development, mostly to conform to accessability standards, this was the base palette used.
+While some of the colours used were tweaked throughout the development, mostly to conform to accessibility standards, this was the base palette used.
 
 ![SpellBook Colour Palette](screenshots/colour-palette.jpg)
 
@@ -319,7 +319,6 @@ Development and initial testing took place on a HP 250 G6 Laptop (Windows 10) in
 - **Bug:** Was unable to apply a class to a table row on load, as part of the `document.ready` function.
     - **Issue:** The element is created by fetching the information from the API and writing it to the DOM as a Bootstrap table, which is subsequently styled by DataTables. This extra work meant that the element did not exist at the time that the `.addClass()` was being called.
     - **Fix:** Used a `setTimeout()` function to delay calling the `.addClass()` until after the element has loaded.
-### Bugs to be fixed
 
 # Deployment
 - This site was developed in [Gitpod](https://www.gitpod.io/), committed and pushed to [Github](https://github.com/), and deployed on [GitHub Pages](https://pages.github.com/).
@@ -345,12 +344,13 @@ Development and initial testing took place on a HP 250 G6 Laptop (Windows 10) in
 * *More info on cloning a **GitHub** repository can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).*
 
 # Credits
-### Code
+## Code
 - The site's responsive offcanvas navbar was adapted from a Bootstrap example [here](https://getbootstrap.com/docs/4.6/examples/offcanvas/).
 - Code to allow users to interupt scroll animation adapted from StackOverflow question [here](https://stackoverflow.com/questions/2834667/how-can-i-differentiate-a-manual-scroll-via-mousewheel-scrollbar-from-a-javasc).
-### Content
-### Media
+## Content
 - Hero images and Class Icons on the site are taken from the official Dungeons & Dragons Fan Site Kit, and used in line with Wizard's [Fan Site Kit Policy](https://dnd.wizards.com/articles/features/fan-site-kit).
 - Ink well image used under Creative Commons licence from [pngall.com](http://www.pngall.com/?p=26696).
 - Loading .gif courtesy of [acegif.com](https://acegif.com/gifs-loading/).
-### Acknowledgements
+- Brand Logo and Favicon were created by the developer, using the Technologies mentioned above.
+## Acknowledgements
+- I would like to thank Jack Wachira for his continued support and guidance throughout the development process.
