@@ -271,14 +271,18 @@ Development and initial testing took place on a HP 250 G6 Laptop (Windows 10) in
     - The site uses the browsers local storage to "remember" the choice of Class Spell List and Spell Data the user has made on a previous visit, and show them on load.
     - This was tested and found to be functioning on all browsers.
     - If there are no previous selections found in local storage, it will to default to the first Class and Spell alphabetically, namely "Bard" and "Animal Friendship".
-    - This was tesetd across browsers using the `localStorage.clear();` command in the console and refreshing the page.
+    - This was tested across browsers using the `localStorage.clear();` command in the console and refreshing the page.
 ### Contact
-- EmailJS
+- Contact Form (EmailJS)
+    - Tested that:
+        - the form inputs are required and the form will not submit if left empty.
+        - the email input checks if the text provided is in the form of an email address, and will not submit if the format is incorect.
+        - the data from the form is collected into an email and sent (via EmailJS) to the site owner, in this case the developer's personal email address.
 - Send Button
-        
-        
-
-
+    - Tested that:
+        - the Send Message button displays correctly
+        - the button successfully transitions along the sending path as the EmailJS API processes; from Send Message to Sending to Sent.
+        - the Sending Failed button displays correctly when the API request fails. This was tested by intentionally giving the API an incorrect user key.
 # Bugs
 ### Fixed
 - **Bug:** The search input added by the DataTables plugin was displaying incorrectly on tablet-sized screens.
