@@ -150,7 +150,7 @@ All fonts for the site are from [Google Fonts](https://fonts.google.com/).
         - Send Message: The default submit button visible on load.
         - Sending: Once the Send Message button is clicked (provided the form data provided is validated, as described above) the button will change to Sending. This button is orange in colour and displays a throbber/loading gif to communicate to the user that their action is being processed.
         - Sent: Once the request to the EmailJS API is successfully completed, and an email has been sent, the button will change to Sent. This button displays as green, and shows a tick icon to indicate the action has been successful.
-        - Sending Failed: If the request is unable to process for any reason, the button will change to Sending Failed, and an error will log to the console. This button is red in colour, and shows an X icon to indicate that the action has failed. Additionally, if the Sending Failed button is displayed, the form content will not be deleted, which means the user's inputted text has not been lost.
+        - Sending Failed: If the request is unable to process for any reason, the button will change to Sending Failed. This button is red in colour, and shows an X icon to indicate that the action has failed. Additionally, if the Sending Failed button is displayed, the form content will not be deleted, which means the user's inputted text has not been lost.
     ![Send Button](screenshots/send-button.PNG)
 
 ## Features To Be Implemented
