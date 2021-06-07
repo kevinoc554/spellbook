@@ -15,17 +15,32 @@ Site Owner Goal:
 *A screenshot of the Home page (index.html) as viewed on different screen sizes, generated on [ami.responsivedesign.is](http://ami.responsivedesign.is/). An interactive scrollable version is available [here](http://ami.responsivedesign.is/?url=https://kevinoc554.github.io/spellbook/index.html).*
 
 # UX
-### User Stories
+## User Stories
 1. As a user, I want to be able to view a list of Spells associated with each Class.
 2. As a user, I want to be able to search through the list to locate a particular Spell.
 3. As a user, I want to be able to view the game information and description for a particular Spell.
 4. As a user, I want to be able to contact the Site Owner to provide feedback or request further features.
 5. As the site owner, I want to be able to provide clear documentation on the licence under which the game information is provided, and attribution wherever copyrighted material is used.
 
-### Wireframes
+## Design
+### Initial Wireframes
+Based on the above User Stories, the following wireframes were mocked up.
 - [index.html](wireframes/index.pdf)
 - [contact.html](wireframes/contact.pdf)
 - [about.html](wireframes/about.pdf)
+
+### Colour Scheme
+The site's initial colour palette was built around the chosen hero image, a version of which is the cover image of the bestselling Dungeons & Dragons book, the Player's Handbook. This image and colour scheme was employed in order to elicit a positive response from users, the majority of whom will be familiar with this artwork and book already. 
+
+While some of the colours used were tweaked throughout the development, mostly to conform to accessability standards, this was the base palette used.
+
+![SpellBook Colour Palette](screenshots/colour-palette.jpg)
+
+### Fonts
+All fonts for the site are from [Google Fonts](https://fonts.google.com/).
+- [Aclonia](https://fonts.google.com/specimen/Aclonica) is used for main headings and titles.
+- [Roboto](https://fonts.google.com/specimen/Roboto) is used for sub-headings.
+- [Lora](https://fonts.google.com/specimen/Lora) is used for the body text.
 
 # Features
 ## General
