@@ -262,7 +262,14 @@ Development and initial testing took place on a HP 250 G6 Laptop (Windows 10) in
             - changes that row's background colour to show it is selected. 
             - sends an API request that returns the information for that spell.
             - displays it in the Spell Data section.
-### JavaScript
+- Spell Data
+    - Tested that:
+        - the Spell Data section displays correctly and all text is legible.
+        - the "if" statements are functioning correctly, and no `undefined` variables are written to the DOM for the user to see.
+        - the chevrons to show/hide more information function correctly.
+        - the Class names at the bottom of the section are clickable, and doing so will update the Class Spell List with the clicked Class.
+
+### Homepage - JavaScript
 - API Error Handling
     - As users are selecting from a defined set of options rather than providing a typed input, if the API itself is functioning, the request is unlikely to fail. That said, provisions have been built into the site's JS to ensure that in the event that the API request does fail, it is handled gracefully and results in a positive user experience.
     - Instead of the requested information (Class Spell List or Spell Data) a piece of text will display informing the user that something went wrong and asking them to  try again. The text will also ask the user to report any persistent issues to the site owners via the Contact form.
@@ -273,7 +280,7 @@ Development and initial testing took place on a HP 250 G6 Laptop (Windows 10) in
     - If there are no previous selections found in local storage, it will default to the first Class and Spell alphabetically, namely "Bard" and "Animal Friendship".
     - This was tested across browsers using the `localStorage.clear();` command in the console and refreshing the page.
 ### Contact
-- Contact Form (EmailJS)
+- Contact Form
     - Tested that:
         - the form inputs are required, and the form will not submit if left empty.
         - the email input checks if the text provided is in the form of an email address and will not submit if the format is incorrect.
