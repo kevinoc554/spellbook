@@ -264,23 +264,23 @@ Development and initial testing took place on a HP 250 G6 Laptop (Windows 10) in
             - displays it in the Spell Data section.
 ### JavaScript
 - API Error Handling
-    - As users are selecting from a defined set of options rather than providing a typed input, as long as the API itself is functioning, the request is unlikely to fail. That said, provisions have been built into the site's JS to ensure that in the event that the API request does fail, it is handled gracefully and results in a positive user experience.
-    - Instead of the requested information (Class Spell List or Spell Data) a piece of text will display informign the user that something went wrong, and asking them to  try again. The text will also ask the user to report any persistent issues to the site owners via the Contact form.
-    - In order to test this, the API was intentionally fed a bad URL to ensure it failed and the text appeared as intended
+    - As users are selecting from a defined set of options rather than providing a typed input, if the API itself is functioning, the request is unlikely to fail. That said, provisions have been built into the site's JS to ensure that in the event that the API request does fail, it is handled gracefully and results in a positive user experience.
+    - Instead of the requested information (Class Spell List or Spell Data) a piece of text will display informing the user that something went wrong and asking them to  try again. The text will also ask the user to report any persistent issues to the site owners via the Contact form.
+    - In order to test this, the API was intentionally fed a bad URL to ensure it failed and the text appeared as intended.
 - Local Storage
-    - The site uses the browsers local storage to "remember" the choice of Class Spell List and Spell Data the user has made on a previous visit, and show them on load.
+    - The site uses the browsers local storage to "remember" the choice of Class Spell List and Spell Data the user has made on a previous visit and show them on load.
     - This was tested and found to be functioning on all browsers.
-    - If there are no previous selections found in local storage, it will to default to the first Class and Spell alphabetically, namely "Bard" and "Animal Friendship".
+    - If there are no previous selections found in local storage, it will default to the first Class and Spell alphabetically, namely "Bard" and "Animal Friendship".
     - This was tested across browsers using the `localStorage.clear();` command in the console and refreshing the page.
 ### Contact
 - Contact Form (EmailJS)
     - Tested that:
-        - the form inputs are required and the form will not submit if left empty.
-        - the email input checks if the text provided is in the form of an email address, and will not submit if the format is incorect.
+        - the form inputs are required, and the form will not submit if left empty.
+        - the email input checks if the text provided is in the form of an email address and will not submit if the format is incorrect.
         - the data from the form is collected into an email and sent (via EmailJS) to the site owner, in this case the developer's personal email address.
 - Send Button
     - Tested that:
-        - the Send Message button displays correctly
+        - the Send Message button displays correctly.
         - the button successfully transitions along the sending path as the EmailJS API processes; from Send Message to Sending to Sent.
         - the Sending Failed button displays correctly when the API request fails. This was tested by intentionally giving the API an incorrect user key.
 # Bugs
